@@ -43,39 +43,37 @@ class Flower
 
 };
 
-template <class _RanIt, class _Pr>
-_CONSTEXPR20 void mysort(const _RanIt _First, const _RanIt _Last, _Pr _Pred) { // order [_First, _Last)
-	_Adl_verify_range(_First, _Last);
-	const auto _UFirst = _Get_unwrapped(_First);
-	const auto _ULast = _Get_unwrapped(_Last);
-	_Sort_unchecked(_UFirst, _ULast, _ULast - _UFirst, _Pass_fn(_Pred));
-}
-
 bool comparison(Flower a, Flower b)
 {
 	return (a.distance < b.distance);
 }
 
-string classifyAPoint(vector<Flower> arr, int k, Flower f)
+bool contains(vector<string> vec, string s) {
+	for (string x : vec) {
+		if (x._Equal(s)) return true;
+	}
+	return false;
+}
+
+string classifyAPoint(vector<Flower> classifiedVec, int k, Flower f)
 {
 	//hamon gus
-	for (int i = 0; i < arr.size(); i++) {
-		arr[i].calcDistance(f);
+	for (int i = 0; i < classifiedVec.size(); i++) {
+		classifiedVec[i].calcDistance(f);
 	}
-		
-	mysort(arr.begin(), arr.end(), comparison);
 	vector<string> flowerTypes;
-	for (Flower f : arr) {
-		if (flowerTypes.empty()||!f.type._Equal(flowerTypes.())) {
+	for (Flower f : classifiedVec) {
+		if (flowerTypes.empty() || !contains(flowerTypes, f.type)) {
 			flowerTypes.push_back(f.type);
 		}
 	}
+	sort(classifiedVec.begin(), classifiedVec.end(), comparison);
 	vector<int> numOfFlowerType(flowerTypes.size());
 	for (int i : numOfFlowerType) i = 0;
 	for (int i = 0; i < k; i++)
 	{
 		for (int j = 0; j < flowerTypes.size(); j++) {
-			if (flowerTypes[j]._Equal(arr[i].type)) {
+			if (flowerTypes[j]._Equal(classifiedVec[i].type)) {
 				numOfFlowerType[j]++;
 			}
 		}
