@@ -54,6 +54,25 @@ bool contains(vector<string> vec, string s) {
 	}
 	return false;
 }
+vector<string> getFlowerTypes(vector<Flower> flowerVec)
+{
+	vector<string> flowerTypes;
+	for (Flower f : flowerVec) {
+		if (flowerTypes.empty() || !contains(flowerTypes, f.type)) {
+			flowerTypes.push_back(f.type);
+		}
+	}
+	return flowerTypes;
+}
+int getMaxElementIndex(vector<int> vector)
+{
+	int maxElementIdx = 0;
+	for (int i = 0; i < vector.size(); i++)
+	{
+		if (vector[maxElementIdx] < vector[i]) maxElementIdx = i;
+	}
+	return maxElementIdx;
+}
 
 string classifyAPoint(vector<Flower> classifiedVec, int k, Flower f)
 {
@@ -61,12 +80,7 @@ string classifyAPoint(vector<Flower> classifiedVec, int k, Flower f)
 	for (int i = 0; i < classifiedVec.size(); i++) {
 		classifiedVec[i].calcDistance(f);
 	}
-	vector<string> flowerTypes;
-	for (Flower f : classifiedVec) {
-		if (flowerTypes.empty() || !contains(flowerTypes, f.type)) {
-			flowerTypes.push_back(f.type);
-		}
-	}
+	vector<string> flowerTypes = getFlowerTypes(classifiedVec);
 	sort(classifiedVec.begin(), classifiedVec.end(), comparison);
 	vector<int> numOfFlowerType(flowerTypes.size());
 	for (int i : numOfFlowerType) i = 0;
@@ -78,12 +92,7 @@ string classifyAPoint(vector<Flower> classifiedVec, int k, Flower f)
 			}
 		}
 	}
-	int maxElementIdx = 0;
-	for (int i = 0; i < numOfFlowerType.size(); i++)
-	{
-		if (numOfFlowerType[maxElementIdx] < numOfFlowerType[i]) maxElementIdx = i;
-	}
-	return flowerTypes[maxElementIdx];
+	return flowerTypes[getMaxElementIndex(numOfFlowerType)];
 }
 
 int main()
