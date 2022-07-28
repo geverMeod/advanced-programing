@@ -6,6 +6,8 @@
 #include <vector>
 #include <fstream>
 #include <string>
+#include <sstream>
+
 using namespace std;
 
 class Flower
@@ -39,7 +41,7 @@ bool comparison(Flower a, Flower b)
 	return (a.distance < b.distance);
 }
 
-int classifyAPoint(vector<Flower> arr, int k, Flower f)
+string classifyAPoint(vector<Flower> arr, int k, Flower f)
 {
 	//hamon gus
 	for (int i = 0; i < arr.size(); i++) {
@@ -47,24 +49,70 @@ int classifyAPoint(vector<Flower> arr, int k, Flower f)
 	}
 		
 	mysort(arr.begin(), arr.end(), comparison);
-	int numOf = 0;
-	int freq2 = 0;
-	return 0;
+	vector<string> flowerTypes;
+	for (Flower f : arr) {
+		if (flowerTypes.empty()||!f.type._Equal(flowerTypes.())) {
+			flowerTypes.push_back(f.type);
+		}
+	}
+	vector<int> numOfFlowerType(flowerTypes.size());
+	for (int i : numOfFlowerType) i = 0;
+	for (int i = 0; i < k; i++)
+	{
+		for (int j = 0; j < flowerTypes.size(); j++) {
+			if (flowerTypes[j]._Equal(arr[i].type)) {
+				numOfFlowerType[j]++;
+			}
+		}
+	}
+	int maxElementIdx = 0;
+	for (int i = 0; i < numOfFlowerType.size(); i++)
+	{
+		if (numOfFlowerType[maxElementIdx] < numOfFlowerType[i]) maxElementIdx = i;
+	}
+	return flowerTypes[maxElementIdx];
 }
 
 int main()
 {
 	ifstream classified;
 	classified.open("classified.csv");
-	vector<Flower> classifiedVec = new vector<Flower>();
+	vector<Flower> classifiedVec;
 	while (classified.good()) {
+		string cell;
 		string line;
-		getline(classified,line, ',');
-		cout << line << endl;
+		Flower thisFlower;
+		stringstream lineStream;
+		getline(classified, line);
+		if (!line.empty()) {
+			lineStream.str(line);
+			for (int i = 0; i < 4; i++) {
+				getline(lineStream, cell, ',');
+				thisFlower.attributes[i] = stod(cell);
+			}
+			getline(lineStream, cell, ',');
+			thisFlower.type = cell;
+			classifiedVec.push_back(thisFlower);
+			
+		}
 	}
-	const int n = 17; 
-	vector<Flower> arr;
-	int k = 3;
+	ifstream unclassified;
+	unclassified.open("Unclassified.csv");
+	while (unclassified.good()) {
+		string cell;
+		string line;
+		Flower thisFlower;
+		stringstream lineStream;
+		getline(unclassified, line);
+		if (!line.empty()) {
+			lineStream.str(line);
+			for (int i = 0; i < 4; i++) {
+				getline(lineStream, cell, ',');
+				thisFlower.attributes[i] = stod(cell);
+			}
+			cout << classifyAPoint(classifiedVec, 3, thisFlower) << endl;
+		}
+	}
 	return 0;
 }
 
