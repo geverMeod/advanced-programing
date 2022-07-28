@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="D:\עמרי\בר אילן\סמסטר קיץ 2022\תכנות מתקדם 1\תרגיל 1\ass1.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\עמרי\בר אילן\סמסטר קיץ 2022\תכנות מתקדם 1\תרגיל 1\main.cpp">
+    <ClCompile Include="ass1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
