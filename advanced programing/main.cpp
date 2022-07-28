@@ -12,40 +12,67 @@ using namespace std;
 
 class Flower
 {
-	public:
+	private:
 		string type;
 		double attributes[4];
+		double distance=0;
 	public:
-		double distance;
-		double calcDistance(Flower other) {
+		double euclideanDistance(Flower other) {
 			double sqrDistance = 0;
 			for (int i = 0; i < 4; i++) {
-				sqrDistance += (attributes[i]-other.attributes[i]) * (attributes[i] - other.attributes[i]);
+				sqrDistance += (this->attributes[i]-other.attributes[i]) * (this->attributes[i] - other.attributes[i]);
 			}
-			distance = sqrt(sqrDistance);
-			return distance;
+			this->distance = sqrt(sqrDistance);
+			return this->distance;
 		}
-		double manhettenDistance(Flower other) {
-			distance = 0;
+		double manhattanDistance(Flower other) {
+			this->distance = 0;
 			for (int i = 0; i < 4; i++) {
-				distance += abs(attributes[i] - other.attributes[i]);
+				this->distance += abs(this->attributes[i] - other.attributes[i]);
 			}
-			return distance;
+			return this->distance;
 		}
 		double chebyshevDistance(Flower other) {
 			double maxDistance = 0;
 			for (int i = 0; i < 4; i++) {
-				maxDistance = max(attributes[i] - other.attributes[i], maxDistance);
+				maxDistance = max(this->attributes[i] - other.attributes[i], maxDistance);
 			}
-			distance = maxDistance;
-			return distance;
+			this->distance = maxDistance;
+			return this->distance;
 		}
-
+		string getType()
+		{
+			return this->type;
+		}
+		void setType(string type)
+		{
+			this->type = type;
+		}
+		double* getAttributes()
+		{
+			return this->attributes;
+		}
+		void setAttribute(double value, int index)
+		{
+			if (index >= sizeof(this->attributes)/sizeof(this->attributes[0]))
+			{
+				return;
+			}
+			this->attributes[index] = value;
+		}
+		double getDistance()
+		{
+			return this->distance;
+		}
+		void setDistance(double distance)
+		{
+			this->distance = distance;
+		}
 };
 
 bool comparison(Flower a, Flower b)
 {
-	return (a.distance < b.distance);
+	return (a.getDistance() < b.getDistance());
 }
 
 bool contains(vector<string> vec, string s) {
@@ -58,8 +85,8 @@ vector<string> getFlowerTypes(vector<Flower> flowerVec)
 {
 	vector<string> flowerTypes;
 	for (Flower f : flowerVec) {
-		if (flowerTypes.empty() || !contains(flowerTypes, f.type)) {
-			flowerTypes.push_back(f.type);
+		if (flowerTypes.empty() || !contains(flowerTypes, f.getType())) {
+			flowerTypes.push_back(f.getType());
 		}
 	}
 	return flowerTypes;
@@ -87,7 +114,7 @@ string classifyAPoint(vector<Flower> classifiedVec, int k, Flower f)
 	for (int i = 0; i < k; i++)
 	{
 		for (int j = 0; j < flowerTypes.size(); j++) {
-			if (flowerTypes[j]._Equal(classifiedVec[i].type)) {
+			if (flowerTypes[j]._Equal(classifiedVec[i].getType())) {
 				numOfFlowerType[j]++;
 			}
 		}
@@ -97,6 +124,9 @@ string classifyAPoint(vector<Flower> classifiedVec, int k, Flower f)
 
 int main()
 {
+	int k;
+	cout << "please enter the k you want for the KNN: ";
+	cin >> k;
 	ifstream classified;
 	classified.open("classified.csv");
 	vector<Flower> classifiedVec;
@@ -110,10 +140,10 @@ int main()
 			lineStream.str(line);
 			for (int i = 0; i < 4; i++) {
 				getline(lineStream, cell, ',');
-				thisFlower.attributes[i] = stod(cell);
+				thisFlower.setAttribute(stod(cell), i);
 			}
 			getline(lineStream, cell, ',');
-			thisFlower.type = cell;
+			thisFlower.setType(cell);
 			classifiedVec.push_back(thisFlower);
 			
 		}
@@ -130,9 +160,9 @@ int main()
 			lineStream.str(line);
 			for (int i = 0; i < 4; i++) {
 				getline(lineStream, cell, ',');
-				thisFlower.attributes[i] = stod(cell);
+				thisFlower.setAttribute(stod(cell), i);
 			}
-			cout << classifyAPoint(classifiedVec, 3, thisFlower) << endl;
+			cout << classifyAPoint(classifiedVec, k, thisFlower) << endl;
 		}
 	}
 	return 0;
