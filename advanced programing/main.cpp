@@ -20,9 +20,23 @@ class Flower
 		double calcDistance(Flower other) {
 			double sqrDistance = 0;
 			for (int i = 0; i < 4; i++) {
-				sqrDistance += attributes[i] * attributes[i];
+				sqrDistance += (attributes[i]-other.attributes[i]) * (attributes[i] - other.attributes[i]);
 			}
 			distance = sqrt(sqrDistance);
+			return distance;
+		}
+		double manhettenDistance(Flower other) {
+			for (int i = 0; i < 4; i++) {
+				distance += abs(attributes[i] - other.attributes[i]);
+			}
+			return distance;
+		}
+		double chebyshevDistance(Flower other) {
+			double maxDistance = 0;
+			for (int i = 0; i < 4; i++) {
+				maxDistance = max(attributes[i] - other.attributes[i], maxDistance);
+			}
+			distance = maxDistance;
 			return distance;
 		}
 
