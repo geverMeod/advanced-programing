@@ -34,6 +34,9 @@ bool comparison(Flower a, Flower b)
 int classifyAPoint(vector<Flower> arr, int n, int k, Flower f)
 {
 	// Fill distances of all points from p
+
+
+	//hamon gus
 	for (int i = 0; i < n; i++)
 		arr[i].calcDistance(f);
 
