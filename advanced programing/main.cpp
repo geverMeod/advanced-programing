@@ -4,6 +4,8 @@
 #include <algorithm>
 #include <cmath>
 #include <vector>
+#include <fstream>
+#include <string>
 using namespace std;
 
 class Flower
@@ -24,6 +26,14 @@ class Flower
 
 };
 
+template <class _RanIt, class _Pr>
+_CONSTEXPR20 void mysort(const _RanIt _First, const _RanIt _Last, _Pr _Pred) { // order [_First, _Last)
+	_Adl_verify_range(_First, _Last);
+	const auto _UFirst = _Get_unwrapped(_First);
+	const auto _ULast = _Get_unwrapped(_Last);
+	_Sort_unchecked(_UFirst, _ULast, _ULast - _UFirst, _Pass_fn(_Pred));
+}
+
 bool comparison(Flower a, Flower b)
 {
 	return (a.distance < b.distance);
@@ -32,17 +42,29 @@ bool comparison(Flower a, Flower b)
 int classifyAPoint(vector<Flower> arr, int k, Flower f)
 {
 	//hamon gus
-	for (int i = 0; i < arr.size(); i++)
+	for (int i = 0; i < arr.size(); i++) {
 		arr[i].calcDistance(f);
-	sort(arr.begin(), arr.end(), comparison);
+	}
+		
+	mysort(arr.begin(), arr.end(), comparison);
 	int numOf = 0;
 	int freq2 = 0;
+	return 0;
 }
 
 int main()
 {
+	ifstream classified;
+	classified.open("classified.csv");
+	vector<Flower> classifiedVec = new vector<Flower>();
+	while (classified.good()) {
+		string line;
+		getline(classified,line, ',');
+		cout << line << endl;
+	}
 	const int n = 17; 
 	vector<Flower> arr;
 	int k = 3;
 	return 0;
 }
+
