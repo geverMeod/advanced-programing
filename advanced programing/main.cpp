@@ -173,10 +173,13 @@ int main()
 				thisFlower.setAttribute(stod(cell), i);
 			}
 			euclideanFile << classifyAPoint(classifiedVec, k, thisFlower, &Flower::euclideanDistance) << endl;
-			cout << classifyAPoint(classifiedVec, k, thisFlower, &Flower::euclideanDistance) << endl;
+			manhattenFile << classifyAPoint(classifiedVec, k, thisFlower, &Flower::manhattanDistance) << endl;
+			chebyshevFile << classifyAPoint(classifiedVec, k, thisFlower, &Flower::chebyshevDistance) << endl;
 		}
 	}
 	euclideanFile.close();
+	manhattenFile.close();
+	chebyshevFile.close();
 	return 0;
 }
 
