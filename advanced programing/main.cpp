@@ -104,7 +104,7 @@ int getMaxElementIndex(vector<int> vector)
 string classifyAPoint(vector<Flower> classifiedVec, int k, Flower f, double (Flower::*distanceFunction)(Flower))
 {
 	for (int i = 0; i < classifiedVec.size(); i++) {
-		((&classifiedVec[i])->*distanceFunction)(f);
+		(classifiedVec[i].*distanceFunction)(f);
 	}
 	vector<string> flowerTypes = getFlowerTypes(classifiedVec);
 	sort(classifiedVec.begin(), classifiedVec.end(), comparison);
