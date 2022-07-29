@@ -35,7 +35,7 @@ class Flower
 		double chebyshevDistance(Flower other) {
 			double maxDistance = 0;
 			for (int i = 0; i < 4; i++) {
-				maxDistance = max(this->attributes[i] - other.attributes[i], maxDistance);
+				maxDistance = max(abs(this->attributes[i] - other.attributes[i]), maxDistance);
 			}
 			this->distance = maxDistance;
 			return this->distance;
@@ -101,11 +101,10 @@ int getMaxElementIndex(vector<int> vector)
 	return maxElementIdx;
 }
 
-string classifyAPoint(vector<Flower> classifiedVec, int k, Flower f)
+string classifyAPoint(vector<Flower> classifiedVec, int k, Flower f, double (Flower::*distanceFunction)(Flower))
 {
-	//hamon gus
 	for (int i = 0; i < classifiedVec.size(); i++) {
-		classifiedVec[i].calcDistance(f);
+		&(classifiedVec[i])->*(distanceFunction(f));
 	}
 	vector<string> flowerTypes = getFlowerTypes(classifiedVec);
 	sort(classifiedVec.begin(), classifiedVec.end(), comparison);
@@ -122,13 +121,10 @@ string classifyAPoint(vector<Flower> classifiedVec, int k, Flower f)
 	return flowerTypes[getMaxElementIndex(numOfFlowerType)];
 }
 
-int main()
+vector<Flower> getFlowersFromFile(string name)
 {
-	int k;
-	cout << "please enter the k you want for the KNN: ";
-	cin >> k;
 	ifstream classified;
-	classified.open("classified.csv");
+	classified.open(name);
 	vector<Flower> classifiedVec;
 	while (classified.good()) {
 		string cell;
@@ -145,9 +141,23 @@ int main()
 			getline(lineStream, cell, ',');
 			thisFlower.setType(cell);
 			classifiedVec.push_back(thisFlower);
-			
+
 		}
 	}
+	return classifiedVec;
+}
+
+int main()
+{
+	int k;
+	cout << "please enter the k you want for the KNN: ";
+	cin >> k;
+	ofstream euclideanFile, manhattenFile, chebyshevFile;
+	euclideanFile.open("euclidean_output.csv");
+	manhattenFile.open("manhattan_output.csv");
+	chebyshevFile.open("chebyshev_output.csv");
+	ifstream classified;
+	vector<Flower> classifiedVec = getFlowersFromFile("classified.csv");
 	ifstream unclassified;
 	unclassified.open("Unclassified.csv");
 	while (unclassified.good()) {
@@ -162,9 +172,11 @@ int main()
 				getline(lineStream, cell, ',');
 				thisFlower.setAttribute(stod(cell), i);
 			}
+			euclideanFile << classifyAPoint(classifiedVec, k, thisFlower) << endl;
 			cout << classifyAPoint(classifiedVec, k, thisFlower) << endl;
 		}
 	}
+	euclideanFile.close();
 	return 0;
 }
 
