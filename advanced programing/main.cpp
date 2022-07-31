@@ -122,7 +122,7 @@ void createAndRun(int k)
 			euclideanFile << classifyAPoint(classifiedVec, k, thisFlower, &Flower::euclideanDistance) << endl;
 			manhattenFile << classifyAPoint(classifiedVec, k, thisFlower, &Flower::manhattanDistance) << endl;
 			chebyshevFile << classifyAPoint(classifiedVec, k, thisFlower, &Flower::chebyshevDistance) << endl;
-			//we get the unclassified flower from the unclasified file and fide its type according to the diffrent distance functions.
+			//we get the unclassified flower from the unclasified file and find its type according to the diffrent distance functions.
 		}
 	}
 	euclideanFile.close();
