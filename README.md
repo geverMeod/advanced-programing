@@ -14,4 +14,7 @@ In our code we will search for the most frequent label.
 Firstly we put all the classified irises in a vector of flowers.
 We want to classify each point in the Unclassified file, so we calculate the distance from each flower in the flower vector to the iris we want classify.
 We then sort the vector (and now know that the KNN are the first k elements in the vector).
-we count the number of instances of each flower type and the type with the most instances is the solution to our problem.
+we count the number of instances of each flower type and the one with the most instances is the solution to our problem.
+
+# How to Run
+
