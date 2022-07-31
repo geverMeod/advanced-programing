@@ -2,6 +2,7 @@
 #include <string>
 
 double Flower::euclideanDistance(Flower other) {
+	//the function calculates the distance between 2 flowers using the euclidean way
 	double sqrDistance = 0;
 	for (int i = 0; i < 4; i++) {
 		sqrDistance += (this->attributes[i] - other.attributes[i]) * (this->attributes[i] - other.attributes[i]);
@@ -10,6 +11,7 @@ double Flower::euclideanDistance(Flower other) {
 	return this->distance;
 }
 double Flower::manhattanDistance(Flower other) {
+	//the function calculates the distance between 2 flowers using the manhattan way
 	this->distance = 0;
 	for (int i = 0; i < 4; i++) {
 		this->distance += abs(this->attributes[i] - other.attributes[i]);
@@ -17,6 +19,7 @@ double Flower::manhattanDistance(Flower other) {
 	return this->distance;
 }
 double Flower::chebyshevDistance(Flower other) {
+	//the function calculates the distance between 2 flowers using the chebyshev way
 	double maxDistance = 0;
 	for (int i = 0; i < 4; i++) {
 		maxDistance = max(abs(this->attributes[i] - other.attributes[i]), maxDistance);
