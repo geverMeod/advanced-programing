@@ -7,68 +7,9 @@
 #include <fstream>
 #include <string>
 #include <sstream>
+#include "Flower.h"
 
 using namespace std;
-
-class Flower
-{
-	private:
-		string type;
-		double attributes[4];
-		double distance=0;
-	public:
-		double euclideanDistance(Flower other) {
-			double sqrDistance = 0;
-			for (int i = 0; i < 4; i++) {
-				sqrDistance += (this->attributes[i]-other.attributes[i]) * (this->attributes[i] - other.attributes[i]);
-			}
-			this->distance = sqrt(sqrDistance);
-			return this->distance;
-		}
-		double manhattanDistance(Flower other) {
-			this->distance = 0;
-			for (int i = 0; i < 4; i++) {
-				this->distance += abs(this->attributes[i] - other.attributes[i]);
-			}
-			return this->distance;
-		}
-		double chebyshevDistance(Flower other) {
-			double maxDistance = 0;
-			for (int i = 0; i < 4; i++) {
-				maxDistance = max(abs(this->attributes[i] - other.attributes[i]), maxDistance);
-			}
-			this->distance = maxDistance;
-			return this->distance;
-		}
-		string getType()
-		{
-			return this->type;
-		}
-		void setType(string type)
-		{
-			this->type = type;
-		}
-		double* getAttributes()
-		{
-			return this->attributes;
-		}
-		void setAttribute(double value, int index)
-		{
-			if (index >= sizeof(this->attributes)/sizeof(this->attributes[0]))
-			{
-				return;
-			}
-			this->attributes[index] = value;
-		}
-		double getDistance()
-		{
-			return this->distance;
-		}
-		void setDistance(double distance)
-		{
-			this->distance = distance;
-		}
-};
 
 bool comparison(Flower a, Flower b)
 {
@@ -146,12 +87,9 @@ vector<Flower> getFlowersFromFile(string name)
 	}
 	return classifiedVec;
 }
-
-int main()
+void createAndRun(int k)
 {
-	int k;
-	cout << "please enter the k you want for the KNN: ";
-	cin >> k;
+
 	ofstream euclideanFile, manhattenFile, chebyshevFile;
 	euclideanFile.open("euclidean_output.csv");
 	manhattenFile.open("manhattan_output.csv");
@@ -180,6 +118,17 @@ int main()
 	euclideanFile.close();
 	manhattenFile.close();
 	chebyshevFile.close();
+}
+
+int main(int argc, char** argv)
+{
+	if (argc < 2) {
+		cout << "Error, Invalid usage" << endl;
+		exit(1);
+	}
+	int k;
+	k = atoi(argv[1]);
+	createAndRun(k);
 	return 0;
 }
 

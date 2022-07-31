@@ -19,14 +19,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Flower.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="ass1.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="classified.csv" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Unclassified.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Flower.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
