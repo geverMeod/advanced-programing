@@ -16,5 +16,11 @@ We want to classify each point in the Unclassified file, so we calculate the dis
 We then sort the vector (and now know that the KNN are the first k elements in the vector).
 we count the number of instances of each flower type and the one with the most instances is the solution to our problem.
 
+We added comments in the code if more clarification is requierd.
+
 # How to Run
 
+there are three files to run, Flower.h, Flower.hpp and main.cpp;
+
+since we can't put a direct path to the input file, the classified.csv and Unclassifies.csv files should be in the same directory as the program.
+Also, the command line should be a number representing the k in the KNN.
