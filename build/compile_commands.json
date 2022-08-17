@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/omri/advanced-programing/advanced-programing/build",
+  "command": "/usr/bin/g++    -g   -o CMakeFiles/Server.dir/tcp_server.cpp.o -c /home/omri/advanced-programing/advanced-programing/tcp_server.cpp",
+  "file": "/home/omri/advanced-programing/advanced-programing/tcp_server.cpp"
+},
+{
+  "directory": "/home/omri/advanced-programing/advanced-programing/build",
+  "command": "/usr/bin/g++    -g   -o CMakeFiles/Client.dir/tcp_client.cpp.o -c /home/omri/advanced-programing/advanced-programing/tcp_client.cpp",
+  "file": "/home/omri/advanced-programing/advanced-programing/tcp_client.cpp"
+},
+{
+  "directory": "/home/omri/advanced-programing/advanced-programing/build",
+  "command": "/usr/bin/g++    -g   -o CMakeFiles/AP.dir/main.cpp.o -c /home/omri/advanced-programing/advanced-programing/main.cpp",
+  "file": "/home/omri/advanced-programing/advanced-programing/main.cpp"
+},
+{
+  "directory": "/home/omri/advanced-programing/advanced-programing/build",
+  "command": "/usr/bin/g++    -g   -o CMakeFiles/AP.dir/Flower.cpp.o -c /home/omri/advanced-programing/advanced-programing/Flower.cpp",
+  "file": "/home/omri/advanced-programing/advanced-programing/Flower.cpp"
+}
+]

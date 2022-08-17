@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/omri/advanced-programing/advanced-programing/tcp_client.cpp
+iostream
+-
+sys/socket.h
+-
+stdio.h
+-
+netinet/in.h
+-
+arpa/inet.h
+-
+unistd.h
+-
+string.h
+-
+

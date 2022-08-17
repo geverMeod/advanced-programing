@@ -11,7 +11,7 @@ using namespace std;
 int main() {
 
     const char* ip_address = "127.0.0.1";
-    const int port_no = 5555;
+    const int port_no = 5550;
 
     int sock = socket(AF_INET, SOCK_STREAM, 0);
     if (sock < 0) {
