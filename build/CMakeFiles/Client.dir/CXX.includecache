@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/omri/advanced-programing/advanced-programing/Flower.hpp
+string
+-
+
 /home/omri/advanced-programing/advanced-programing/tcp_client.cpp
 iostream
 -
@@ -21,4 +25,12 @@ unistd.h
 -
 string.h
 -
+string
+-
+fstream
+-
+sstream
+-
+Flower.hpp
+/home/omri/advanced-programing/advanced-programing/Flower.hpp
 

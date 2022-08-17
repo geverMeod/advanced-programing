@@ -10,7 +10,7 @@ using namespace std;
 
 int main() {
 
-    const int server_port = 5550;
+    const int server_port = 5551;
     //gal hage
     int sock = socket(AF_INET, SOCK_STREAM, 0);
     if (sock < 0) {
