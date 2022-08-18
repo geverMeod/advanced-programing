@@ -9,26 +9,24 @@ KNN works by finding the distances between a query and all the examples in the d
 
 ## Explanation of the Algorithem
 
-In our code, the client and the server communicate in a way that the client sends the server a string line representing the unclassified iris,
-the server classifieds the iris with the KNN algorithem(that was used in ass1) and returns the iris's type to the client.
+In our code, the client sends the server the unclassified iris file one line at a time,
+the server classifieds the iris from the line with the KNN algorithem(that was used in ass1) and sends the client the type of the classified iris.
 
-The client classifieds all the irises in the unclassified file by sending all of them one by one to the server.
+The client classifies all the irises in the unclassified file by sending all of them one by one to the server.
 
 We added comments in the code if more clarification is requierd.
 
 ## How to Run
 
-There are four files, Flower.h, Flower.cpp, tcp_client.cpp and tcp_server.cpp.
+There are four files, Flower.hpp, Flower.cpp, tcp_client.cpp and tcp_server.cpp.
 
-since we can't put a direct path to the input file, the classified.csv and Unclassifies.csv files should be in the same directory as the program.
+since we can't put a direct path to the input file, the classified.csv and Unclassified.csv files should be in the same directory as the program.
 
-When executing the server, it should be with Flower.cpp.
-
-  we give a example on what to write in the make file:
-         add_executable(Server tcp_server.cpp Flower.cpp)
-         add_executable(Client tcp_client.cpp
+we recommend you to write these instructions in the cmake file:
+add_executable(Server tcp_server.cpp Flower.cpp)
+add_executable(Client tcp_client.cpp
          
-When running the client in the terminal there should be a command line with the name of the unclassified file and the name of the desired output file
+the client recieves the path to the input and output files from the command line arguments, the first argument should be the input file (contains the uncalssified flowers) and the second argument will be the place whare the output file will be created.
 
   example: ./Client Unclassified.csv Output.csv
  
