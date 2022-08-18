@@ -24,7 +24,7 @@ int main(int argc, char** argv){
     ofstream classifiedOutput;
     classifiedOutput.open(outputFile);
     const char* ip_address = "127.0.0.1";
-    const int port_no = 5551;
+    const int port_no = 5553;
 
     int sock = socket(AF_INET, SOCK_STREAM, 0);
     if (sock < 0) {
@@ -63,6 +63,7 @@ int main(int argc, char** argv){
         }
         else {
             classifiedOutput << buffer << endl;
+            cout << buffer << endl;
         }
     }
     close(sock);

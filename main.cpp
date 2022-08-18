@@ -103,7 +103,6 @@ void createAndRun(int k)
 	manhattenFile.open("manhattan_output.csv");
 	chebyshevFile.open("chebyshev_output.csv");
 	//creating all the output files
-	ifstream classified;
 	vector<Flower> classifiedVec = getFlowersFromFile("classified.csv");
 	ifstream unclassified;
 	unclassified.open("Unclassified.csv");
@@ -112,7 +111,7 @@ void createAndRun(int k)
 		string line;
 		Flower thisFlower;
 		stringstream lineStream;
-		getline(unclassified, line);
+		
 		if (!line.empty()) {
 			lineStream.str(line);
 			for (int i = 0; i < 4; i++) {

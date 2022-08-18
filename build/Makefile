@@ -552,6 +552,7 @@ Flower.o: Flower.cpp.o
 
 # target to build an object file
 Flower.cpp.o:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Flower.cpp.o
 	$(MAKE) -f CMakeFiles/AP.dir/build.make CMakeFiles/AP.dir/Flower.cpp.o
 .PHONY : Flower.cpp.o
 
@@ -561,6 +562,7 @@ Flower.i: Flower.cpp.i
 
 # target to preprocess a source file
 Flower.cpp.i:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Flower.cpp.i
 	$(MAKE) -f CMakeFiles/AP.dir/build.make CMakeFiles/AP.dir/Flower.cpp.i
 .PHONY : Flower.cpp.i
 
@@ -570,6 +572,7 @@ Flower.s: Flower.cpp.s
 
 # target to generate assembly for a file
 Flower.cpp.s:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Flower.cpp.s
 	$(MAKE) -f CMakeFiles/AP.dir/build.make CMakeFiles/AP.dir/Flower.cpp.s
 .PHONY : Flower.cpp.s
 

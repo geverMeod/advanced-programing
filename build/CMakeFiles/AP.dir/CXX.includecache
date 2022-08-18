@@ -13,26 +13,12 @@ string
 -
 cmath
 -
+algorithm
+-
 
 /home/omri/advanced-programing/advanced-programing/Flower.hpp
 string
--
-
-/home/omri/advanced-programing/advanced-programing/main.cpp
-iostream
--
-algorithm
--
-cmath
 -
 vector
 -
-fstream
--
-string
--
-sstream
--
-Flower.hpp
-/home/omri/advanced-programing/advanced-programing/Flower.hpp
 
