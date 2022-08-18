@@ -30,15 +30,14 @@ int main() {
     if (bind(sock, (struct sockaddr *) &sin, sizeof(sin)) < 0) {
         perror("error binding socket");
     }
-    int zero = 1;
-    if (setsockopt(sock, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &zero, sizeof(int)) < 0) {
-        perror("error encountered when changing socket options");
-    }
+    // int zero = 1;
+    // if (setsockopt(sock, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &zero, sizeof(int)) < 0) {
+    //     perror("error encountered when changing socket options");
+    // }
     if (listen(sock, 5) < 0) {
         perror("error listening to a socket");
     }
     vector<Flower> classifiedVec = getFlowersFromFile("classified.csv");
-
     cout << "waiting for connection..." << endl;
     struct sockaddr_in client_sin;
     unsigned int addr_len = sizeof(client_sin);
@@ -47,7 +46,7 @@ int main() {
         perror("error accepting client");
     }
     
-    char buffer[100];
+    char buffer[1000];
     int expected_data_len = sizeof(buffer);
     
     while(true){
@@ -59,16 +58,13 @@ int main() {
             // error
             break;
         }
-        else {
-            cout << "client message: " << buffer;
-        }
         string s(buffer);
         
         Flower f = getFlowerFromLine(s);
         
         f.classify(classifiedVec, 3, &Flower::euclideanDistance);
 
-        int sent_bytes = send(client_sock, &f.getType()[0], read_bytes, 0);
+        int sent_bytes = send(client_sock, f.getType().c_str(), f.getType().size()+1, 0);
 
         if (sent_bytes < 0) {
             perror("error sending to client");
@@ -103,6 +99,7 @@ vector<Flower> getFlowersFromFile(string name)
 	}
 	return classifiedVec;
 }
+//works for an unclassified flower only.
 Flower getFlowerFromLine(string line){
     stringstream lineStream(line);
     string cell;
@@ -111,7 +108,5 @@ Flower getFlowerFromLine(string line){
         getline(lineStream, cell, ',');
         retVal.setAttribute(stod(cell), i);
 	}
-    // getline(lineStream, cell, ',');
-    // retVal.setType(cell);
     return retVal;
 }

@@ -47,23 +47,23 @@ int main(int argc, char** argv){
             break;
         }
         int data_len = line.length();
-        int sent_bytes = send(sock, &line[0], data_len, 0);
-        cout << "sent: " << &line[0] << endl;
+        int sent_bytes = send(sock, line.c_str(), data_len, 0);
         if (sent_bytes < 0) {
-            // error
+            perror("error while sending message");
+            break;
         }
-        char buffer[100];
+        char buffer[1000];
         int expected_data_len = sizeof(buffer);
         int read_bytes = recv(sock, buffer, expected_data_len, 0);
         if (read_bytes == 0) {
-        // connection is closed
+            break;
         }
         else if (read_bytes < 0) {
-        // error
+            perror("error, could not read server massage");
+            break;
         }
         else {
             classifiedOutput << buffer << endl;
-            cout << buffer << endl;
         }
     }
     close(sock);

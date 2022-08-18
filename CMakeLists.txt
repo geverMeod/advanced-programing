@@ -3,9 +3,11 @@ project(AP VERSION 0.1.0)
 
 include(CTest)
 enable_testing()
+
 add_executable(AP main.cpp Flower.cpp)
 add_executable(Server tcp_server.cpp Flower.cpp)
 add_executable(Client tcp_client.cpp)
+
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
