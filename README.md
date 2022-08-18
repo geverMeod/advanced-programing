@@ -9,8 +9,7 @@ KNN works by finding the distances between a query and all the examples in the d
 
 ## Explanation of the Algorithem
 
-In our code, the client sends the server the unclassified iris file one line at a time,
-the server classifieds the iris from the line with the KNN algorithem(that was used in ass1) and sends the client the type of the classified iris.
+The client sends the server the unclassified iris file one line at a time, the server classifies the iris from the line with the KNN algorithem (that was used in ass1) and sends the type of the classified iris back to the client.
 
 The client classifies all the irises in the unclassified file by sending all of them one by one to the server.
 
