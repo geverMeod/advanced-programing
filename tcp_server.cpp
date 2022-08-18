@@ -14,13 +14,12 @@ using namespace std;
 Flower getFlowerFromLine(string line);
 vector<Flower> getFlowersFromFile(string name);
 int main() {
-
+    //needs to match the client port.
     const int server_port = 5553;
-    //gal hage
     int sock = socket(AF_INET, SOCK_STREAM, 0);
     if (sock < 0) {
         perror("error creating socket");
-    }//gal hage
+    }
 
     struct sockaddr_in sin;
     memset(&sin, 0, sizeof(sin));
@@ -30,14 +29,12 @@ int main() {
     if (bind(sock, (struct sockaddr *) &sin, sizeof(sin)) < 0) {
         perror("error binding socket");
     }
-    // int zero = 1;
-    // if (setsockopt(sock, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &zero, sizeof(int)) < 0) {
-    //     perror("error encountered when changing socket options");
-    // }
     if (listen(sock, 5) < 0) {
         perror("error listening to a socket");
     }
+    //creat a vector of the classified flowers.
     vector<Flower> classifiedVec = getFlowersFromFile("classified.csv");
+    //wait for a client to connect.
     cout << "waiting for connection..." << endl;
     struct sockaddr_in client_sin;
     unsigned int addr_len = sizeof(client_sin);
@@ -45,10 +42,9 @@ int main() {
     if (client_sock < 0) {
         perror("error accepting client");
     }
-    
-    char buffer[1000];
+    //
+    char buffer[100];
     int expected_data_len = sizeof(buffer);
-    
     while(true){
         int read_bytes = recv(client_sock, buffer, expected_data_len, 0);
         if (read_bytes == 0 || buffer[0] == '\n') {
@@ -59,13 +55,11 @@ int main() {
             break;
         }
         string s(buffer);
-        
+        //process the line sent from the client.
         Flower f = getFlowerFromLine(s);
-        
         f.classify(classifiedVec, 3, &Flower::euclideanDistance);
-
+        //send the answer to client.
         int sent_bytes = send(client_sock, f.getType().c_str(), f.getType().size()+1, 0);
-
         if (sent_bytes < 0) {
             perror("error sending to client");
             break;
@@ -75,9 +69,9 @@ int main() {
 
     return 0;
 }
+//this function returns a vector that contains all the flowers from the classified file. 
 vector<Flower> getFlowersFromFile(string name)
 {
-	//this function returns a vector that contains all the flowers from the classified file. 
 	ifstream classified;
 	classified.open(name);
 	vector<Flower> classifiedVec;
@@ -99,7 +93,7 @@ vector<Flower> getFlowersFromFile(string name)
 	}
 	return classifiedVec;
 }
-//works for an unclassified flower only.
+//works for an unclassified flower only, returns a flower object that matches the line string.
 Flower getFlowerFromLine(string line){
     stringstream lineStream(line);
     string cell;
