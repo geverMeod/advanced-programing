@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/home/omri/advanced-programing/advanced-programing/Flower.cpp
+Flower.hpp
+/home/omri/advanced-programing/advanced-programing/Flower.hpp
+string
+-
+cmath
+-
+algorithm
+-
+
 /home/omri/advanced-programing/advanced-programing/Flower.hpp
 string
 -

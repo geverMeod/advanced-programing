@@ -3,28 +3,28 @@
 #include <vector>
 
 using namespace std;
-class Flower
+class Iris
 {
 private:
 	string type;
 	double attributes[4];
 	double distance;
 
-	static bool comparison(Flower a, Flower b);
+	static bool comparison(Iris a, Iris b);
 	
 	bool contains(vector<string> vec, string s);
 
-	vector<string> getFlowerTypes(vector<Flower> flowerVec);
+	vector<string> getFlowerTypes(vector<Iris> flowerVec);
 
 	int getMaxElementIndex(vector<int> vector);
 
 public:
 
-	double euclideanDistance(Flower other);
+	double euclideanDistance(Iris other);
 
-	double manhattanDistance(Flower other);
+	double manhattanDistance(Iris other);
 
-	double chebyshevDistance(Flower other);
+	double chebyshevDistance(Iris other);
 
 	string getType() {
 		return this->type;
@@ -44,5 +44,5 @@ public:
 
 	void setDistance(double distance);
 
-	void classify(vector<Flower> classifiedVec, int k, double (Flower::*distanceFunction)(Flower));
+	void classify(vector<Iris> classifiedVec, int k, double (Iris::*distanceFunction)(Iris));
 };

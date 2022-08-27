@@ -10,16 +10,12 @@
 #include <thread>
 #include <pthread.h>
 #include <sstream>
-#include "Flower.hpp"
+#include "Iris.hpp"
 
 using namespace std;
-Flower getFlowerFromLine(string line);
-vector<Flower> getFlowersFromFile(string name);
-void task1(string msg)
-{ 
-    while(true)
-        cout << "task1 says: " << msg << endl;
-}
+Iris getFlowerFromLine(string line);
+vector<Iris> getFlowersFromFile(string name);
+
 int main() {
     //needs to match the client port.
     const int server_port = 5553;
@@ -27,21 +23,23 @@ int main() {
     if (sock < 0) {
         perror("error creating socket");
     }
-    thread work(task1, string("gibel"));
+    
     struct sockaddr_in sin;
     memset(&sin, 0, sizeof(sin));
     sin.sin_family = AF_INET;
     sin.sin_addr.s_addr = INADDR_ANY;
-    work.join();
     sin.sin_port = htons(server_port);
+    
     if (bind(sock, (struct sockaddr *) &sin, sizeof(sin)) < 0) {
         perror("error binding socket");
     }
+
     if (listen(sock, 5) < 0) {
         perror("error listening to a socket");
     }
+
     //creat a vector of the classified flowers.
-    vector<Flower> classifiedVec = getFlowersFromFile("classified.csv");
+    vector<Iris> classifiedVec = getFlowersFromFile("classified.csv");
     //wait for a client to connect.
     cout << "waiting for connection..." << endl;
     struct sockaddr_in client_sin;
@@ -64,8 +62,8 @@ int main() {
         }
         string s(buffer);
         //process the line sent from the client.
-        Flower f = getFlowerFromLine(s);
-        f.classify(classifiedVec, 3, &Flower::euclideanDistance);
+        Iris f = getFlowerFromLine(s);
+        f.classify(classifiedVec, 3, &Iris::euclideanDistance);
         //send the answer to client.
         int sent_bytes = send(client_sock, f.getType().c_str(), f.getType().size()+1, 0);
         if (sent_bytes < 0) {
@@ -78,18 +76,18 @@ int main() {
     return 0;
 }
 //this function returns a vector that contains all the flowers from the classified file. 
-vector<Flower> getFlowersFromFile(string name)
+vector<Iris> getFlowersFromFile(string name)
 {
 	ifstream classified;
 	classified.open(name);
-	vector<Flower> classifiedVec;
+	vector<Iris> classifiedVec;
 	while (classified.good()) {
 		string line;
 		getline(classified, line);
 		if (!line.empty()) {
 			stringstream lineStream(line);
             string cell;
-            Flower f;
+            Iris f;
             for (int i = 0; i < 4; i++) {
                 getline(lineStream, cell, ',');
                 f.setAttribute(stod(cell), i);
@@ -102,10 +100,10 @@ vector<Flower> getFlowersFromFile(string name)
 	return classifiedVec;
 }
 //works for an unclassified flower only, returns a flower object that matches the line string.
-Flower getFlowerFromLine(string line){
+Iris getFlowerFromLine(string line){
     stringstream lineStream(line);
     string cell;
-    Flower retVal;
+    Iris retVal;
 	for (int i = 0; i < 4; i++) {
         getline(lineStream, cell, ',');
         retVal.setAttribute(stod(cell), i);

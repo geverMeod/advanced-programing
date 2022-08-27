@@ -1,23 +1,23 @@
-#include "Flower.hpp"
+#include "Iris.hpp"
 #include <string>
 #include <cmath>
 #include <algorithm>
 
 using namespace std;
 //a comparison method used to sort the flowers by distance.
-bool Flower::comparison(Flower a, Flower b)
+bool Iris::comparison(Iris a, Iris b)
 {
 	return (a.getDistance() < b.getDistance());
 }
 //returns true if the str vector contains s.
-bool Flower::contains(vector<string> vec, string s) {
+bool Iris::contains(vector<string> vec, string s) {
 	for (string x : vec) {
 		if (x.compare(s) == 0) return true;
 	}
 	return false;
 }
 //returns the index of the largest element in the int vector.
-int Flower::getMaxElementIndex(vector<int> vector){
+int Iris::getMaxElementIndex(vector<int> vector){
 	int maxElementIdx = 0;
 	for (int i = 0; i < vector.size(); i++)
 	{
@@ -25,18 +25,18 @@ int Flower::getMaxElementIndex(vector<int> vector){
 	}
 	return maxElementIdx;
 }
-vector<string> Flower::getFlowerTypes(vector<Flower> flowerVec){
+vector<string> Iris::getFlowerTypes(vector<Iris> flowerVec){
 	//returns all the flower types in a vector of flowers.
 	//in our database it returns all the iris types there are.
 	vector<string> flowerTypes;
-	for (Flower f : flowerVec) {
+	for (Iris f : flowerVec) {
 		if (flowerTypes.empty() || !contains(flowerTypes, f.getType())) {
 			flowerTypes.push_back(f.getType());
 		}
 	}
 	return flowerTypes;
 }
-void Flower::classify(vector<Flower> classifiedVec, int k, double (Flower::*distanceFunction)(Flower)){
+void Iris::classify(vector<Iris> classifiedVec, int k, double (Iris::*distanceFunction)(Iris)){
 	//this function checks the knn for an this flower and classifies it, we assume this flower is not classified.
 	//the function gets the distance function to use while calculating the knn.
 	for (int i = 0; i < classifiedVec.size(); i++) {
@@ -59,7 +59,7 @@ void Flower::classify(vector<Flower> classifiedVec, int k, double (Flower::*dist
 	// how many instances there are of each type and classify this flower to be of the type with the most instances.
 	this->setType(flowerTypes[getMaxElementIndex(numOfFlowerType)]);
 }
-double Flower::euclideanDistance(Flower other) {
+double Iris::euclideanDistance(Iris other) {
 	//the function calculates the euclidean distance between 2 flowers
 	double sqrDistance = 0;
 	for (int i = 0; i < 4; i++) {
@@ -68,7 +68,7 @@ double Flower::euclideanDistance(Flower other) {
 	this->distance = sqrt(sqrDistance);
 	return this->distance;
 }
-double Flower::manhattanDistance(Flower other) {
+double Iris::manhattanDistance(Iris other) {
 	//the function calculates the manhattan distance between 2 flowers.
 	this->distance = 0;
 	for (int i = 0; i < 4; i++) {
@@ -76,7 +76,7 @@ double Flower::manhattanDistance(Flower other) {
 	}
 	return this->distance;
 }
-double Flower::chebyshevDistance(Flower other) {
+double Iris::chebyshevDistance(Iris other) {
 	//the function calculates the chebyshev distance between 2 flowers.
 	double maxDistance = 0;
 	for (int i = 0; i < 4; i++) {
@@ -86,16 +86,16 @@ double Flower::chebyshevDistance(Flower other) {
 	return this->distance;
 }
 //setters
-void Flower::setType(string type) {
+void Iris::setType(string type) {
 	this->type = type;
 }
-void Flower::setAttribute(double value, int index) {
+void Iris::setAttribute(double value, int index) {
 	if (index >= sizeof(this->attributes) / sizeof(this->attributes[0])) {
 		return;
 	}
 	this->attributes[index] = value;
 }
-void Flower::setDistance(double distance) {
+void Iris::setDistance(double distance) {
 	this->distance = distance;
 }
 
