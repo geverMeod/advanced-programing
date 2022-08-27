@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/moshiko/advanced-programing-1/Flower.cpp" "/home/moshiko/advanced-programing-1/build/CMakeFiles/Server.dir/Flower.cpp.o"
-  "/home/moshiko/advanced-programing-1/tcp_server.cpp" "/home/moshiko/advanced-programing-1/build/CMakeFiles/Server.dir/tcp_server.cpp.o"
+  "/home/omri/advanced-programing/advanced-programing/Flower.cpp" "/home/omri/advanced-programing/advanced-programing/build/CMakeFiles/Server.dir/Flower.cpp.o"
+  "/home/omri/advanced-programing/advanced-programing/tcp_server.cpp" "/home/omri/advanced-programing/advanced-programing/build/CMakeFiles/Server.dir/tcp_server.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moshiko/advanced-programing-1
+CMAKE_SOURCE_DIR = /home/omri/advanced-programing/advanced-programing
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moshiko/advanced-programing-1/build
+CMAKE_BINARY_DIR = /home/omri/advanced-programing/advanced-programing/build
 
 # Utility rule file for NightlySubmit.
 
@@ -71,6 +71,6 @@ CMakeFiles/NightlySubmit.dir/clean:
 .PHONY : CMakeFiles/NightlySubmit.dir/clean
 
 CMakeFiles/NightlySubmit.dir/depend:
-	cd /home/moshiko/advanced-programing-1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moshiko/advanced-programing-1 /home/moshiko/advanced-programing-1 /home/moshiko/advanced-programing-1/build /home/moshiko/advanced-programing-1/build /home/moshiko/advanced-programing-1/build/CMakeFiles/NightlySubmit.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/omri/advanced-programing/advanced-programing/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omri/advanced-programing/advanced-programing /home/omri/advanced-programing/advanced-programing /home/omri/advanced-programing/advanced-programing/build /home/omri/advanced-programing/advanced-programing/build /home/omri/advanced-programing/advanced-programing/build/CMakeFiles/NightlySubmit.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/NightlySubmit.dir/depend
 

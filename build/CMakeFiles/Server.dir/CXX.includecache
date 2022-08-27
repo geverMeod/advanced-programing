@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/moshiko/advanced-programing-1/Flower.hpp
+/home/omri/advanced-programing/advanced-programing/Flower.hpp
 string
 -
 vector
 -
 
-/home/moshiko/advanced-programing-1/tcp_server.cpp
+/home/omri/advanced-programing/advanced-programing/tcp_server.cpp
 iostream
 -
 sys/socket.h
@@ -25,14 +25,18 @@ arpa/inet.h
 -
 unistd.h
 -
-string.h
+string
 -
 fstream
 -
-string
+string.h
+-
+thread
+-
+pthread.h
 -
 sstream
 -
 Flower.hpp
-/home/moshiko/advanced-programing-1/Flower.hpp
+/home/omri/advanced-programing/advanced-programing/Flower.hpp
 

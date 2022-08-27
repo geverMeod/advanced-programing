@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moshiko/advanced-programing-1
+CMAKE_SOURCE_DIR = /home/omri/advanced-programing/advanced-programing
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moshiko/advanced-programing-1/build
+CMAKE_BINARY_DIR = /home/omri/advanced-programing/advanced-programing/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -81,24 +81,13 @@ test/fast: test
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/moshiko/advanced-programing-1/build/CPackSourceConfig.cmake
+	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/omri/advanced-programing/advanced-programing/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
 package_source/fast: package_source
 
 .PHONY : package_source/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target package
 package: preinstall
@@ -111,11 +100,22 @@ package/fast: package
 
 .PHONY : package/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moshiko/advanced-programing-1/build/CMakeFiles /home/moshiko/advanced-programing-1/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/omri/advanced-programing/advanced-programing/build/CMakeFiles /home/omri/advanced-programing/advanced-programing/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moshiko/advanced-programing-1/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/omri/advanced-programing/advanced-programing/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -142,32 +142,6 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-#=============================================================================
-# Target rules for targets named Server
-
-# Build rule for target.
-Server: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Server
-.PHONY : Server
-
-# fast build rule for target.
-Server/fast:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/build
-.PHONY : Server/fast
-
-#=============================================================================
-# Target rules for targets named NightlyMemCheck
-
-# Build rule for target.
-NightlyMemCheck: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 NightlyMemCheck
-.PHONY : NightlyMemCheck
-
-# fast build rule for target.
-NightlyMemCheck/fast:
-	$(MAKE) -f CMakeFiles/NightlyMemCheck.dir/build.make CMakeFiles/NightlyMemCheck.dir/build
-.PHONY : NightlyMemCheck/fast
 
 #=============================================================================
 # Target rules for targets named NightlyTest
@@ -534,17 +508,30 @@ ContinuousSubmit/fast:
 .PHONY : ContinuousSubmit/fast
 
 #=============================================================================
-# Target rules for targets named AP
+# Target rules for targets named NightlyMemCheck
 
 # Build rule for target.
-AP: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 AP
-.PHONY : AP
+NightlyMemCheck: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyMemCheck
+.PHONY : NightlyMemCheck
 
 # fast build rule for target.
-AP/fast:
-	$(MAKE) -f CMakeFiles/AP.dir/build.make CMakeFiles/AP.dir/build
-.PHONY : AP/fast
+NightlyMemCheck/fast:
+	$(MAKE) -f CMakeFiles/NightlyMemCheck.dir/build.make CMakeFiles/NightlyMemCheck.dir/build
+.PHONY : NightlyMemCheck/fast
+
+#=============================================================================
+# Target rules for targets named Server
+
+# Build rule for target.
+Server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Server
+.PHONY : Server
+
+# fast build rule for target.
+Server/fast:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/build
+.PHONY : Server/fast
 
 Flower.o: Flower.cpp.o
 
@@ -553,7 +540,6 @@ Flower.o: Flower.cpp.o
 # target to build an object file
 Flower.cpp.o:
 	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Flower.cpp.o
-	$(MAKE) -f CMakeFiles/AP.dir/build.make CMakeFiles/AP.dir/Flower.cpp.o
 .PHONY : Flower.cpp.o
 
 Flower.i: Flower.cpp.i
@@ -563,7 +549,6 @@ Flower.i: Flower.cpp.i
 # target to preprocess a source file
 Flower.cpp.i:
 	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Flower.cpp.i
-	$(MAKE) -f CMakeFiles/AP.dir/build.make CMakeFiles/AP.dir/Flower.cpp.i
 .PHONY : Flower.cpp.i
 
 Flower.s: Flower.cpp.s
@@ -573,35 +558,7 @@ Flower.s: Flower.cpp.s
 # target to generate assembly for a file
 Flower.cpp.s:
 	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Flower.cpp.s
-	$(MAKE) -f CMakeFiles/AP.dir/build.make CMakeFiles/AP.dir/Flower.cpp.s
 .PHONY : Flower.cpp.s
-
-main.o: main.cpp.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/AP.dir/build.make CMakeFiles/AP.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/AP.dir/build.make CMakeFiles/AP.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/AP.dir/build.make CMakeFiles/AP.dir/main.cpp.s
-.PHONY : main.cpp.s
 
 tcp_client.o: tcp_client.cpp.o
 
@@ -666,9 +623,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... package_source"
-	@echo "... edit_cache"
-	@echo "... Server"
-	@echo "... NightlyMemCheck"
 	@echo "... NightlyTest"
 	@echo "... ContinuousConfigure"
 	@echo "... ContinuousBuild"
@@ -698,13 +652,12 @@ help:
 	@echo "... ContinuousMemCheck"
 	@echo "... ContinuousTest"
 	@echo "... ContinuousSubmit"
-	@echo "... AP"
+	@echo "... edit_cache"
+	@echo "... NightlyMemCheck"
+	@echo "... Server"
 	@echo "... Flower.o"
 	@echo "... Flower.i"
 	@echo "... Flower.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 	@echo "... tcp_client.o"
 	@echo "... tcp_client.i"
 	@echo "... tcp_client.s"

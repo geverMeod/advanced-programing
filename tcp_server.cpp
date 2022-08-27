@@ -4,15 +4,22 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <unistd.h>
-#include <string.h>
-#include <fstream>
 #include <string>
+#include <fstream>
+#include <string.h>
+#include <thread>
+#include <pthread.h>
 #include <sstream>
 #include "Flower.hpp"
 
 using namespace std;
 Flower getFlowerFromLine(string line);
 vector<Flower> getFlowersFromFile(string name);
+void task1(string msg)
+{ 
+    while(true)
+        cout << "task1 says: " << msg << endl;
+}
 int main() {
     //needs to match the client port.
     const int server_port = 5553;
@@ -20,11 +27,12 @@ int main() {
     if (sock < 0) {
         perror("error creating socket");
     }
-
+    thread work(task1, string("gibel"));
     struct sockaddr_in sin;
     memset(&sin, 0, sizeof(sin));
     sin.sin_family = AF_INET;
     sin.sin_addr.s_addr = INADDR_ANY;
+    work.join();
     sin.sin_port = htons(server_port);
     if (bind(sock, (struct sockaddr *) &sin, sizeof(sin)) < 0) {
         perror("error binding socket");

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/moshiko/advanced-programing-1/tcp_client.cpp" "/home/moshiko/advanced-programing-1/build/CMakeFiles/Client.dir/tcp_client.cpp.o"
+  "/home/omri/advanced-programing/advanced-programing/tcp_client.cpp" "/home/omri/advanced-programing/advanced-programing/build/CMakeFiles/Client.dir/tcp_client.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

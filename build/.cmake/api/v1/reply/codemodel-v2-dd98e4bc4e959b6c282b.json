@@ -43,8 +43,7 @@
 						26,
 						27,
 						28,
-						29,
-						30
+						29
 					]
 				}
 			],
@@ -88,8 +87,7 @@
 						26,
 						27,
 						28,
-						29,
-						30
+						29
 					]
 				}
 			],
@@ -97,15 +95,8 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "AP::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-AP-Debug-f2e35f8d17ba5889539a.json",
-					"name" : "AP",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 0,
 					"id" : "Client::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Client-Debug-7e6dd54dbae03dae0ab3.json",
+					"jsonFile" : "target-Client-Debug-b56503774973da9d89b3.json",
 					"name" : "Client",
 					"projectIndex" : 0
 				},
@@ -308,7 +299,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Server::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Server-Debug-d7ef56b4696a061e3911.json",
+					"jsonFile" : "target-Server-Debug-d1591eb8d01894835122.json",
 					"name" : "Server",
 					"projectIndex" : 0
 				}
@@ -318,8 +309,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/moshiko/advanced-programing-1/build",
-		"source" : "/home/moshiko/advanced-programing-1"
+		"build" : "/home/omri/advanced-programing/advanced-programing/build",
+		"source" : "/home/omri/advanced-programing/advanced-programing"
 	},
 	"version" : 
 	{

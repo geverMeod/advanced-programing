@@ -1,27 +1,17 @@
 [
 {
-  "directory": "/home/moshiko/advanced-programing-1/build",
-  "command": "/usr/bin/g++    -g   -o CMakeFiles/Server.dir/tcp_server.cpp.o -c /home/moshiko/advanced-programing-1/tcp_server.cpp",
-  "file": "/home/moshiko/advanced-programing-1/tcp_server.cpp"
+  "directory": "/home/omri/advanced-programing/advanced-programing/build",
+  "command": "/usr/bin/g++    -g   -lpthread -o CMakeFiles/Client.dir/tcp_client.cpp.o -c /home/omri/advanced-programing/advanced-programing/tcp_client.cpp",
+  "file": "/home/omri/advanced-programing/advanced-programing/tcp_client.cpp"
 },
 {
-  "directory": "/home/moshiko/advanced-programing-1/build",
-  "command": "/usr/bin/g++    -g   -o CMakeFiles/Server.dir/Flower.cpp.o -c /home/moshiko/advanced-programing-1/Flower.cpp",
-  "file": "/home/moshiko/advanced-programing-1/Flower.cpp"
+  "directory": "/home/omri/advanced-programing/advanced-programing/build",
+  "command": "/usr/bin/g++    -g   -lpthread -o CMakeFiles/Server.dir/tcp_server.cpp.o -c /home/omri/advanced-programing/advanced-programing/tcp_server.cpp",
+  "file": "/home/omri/advanced-programing/advanced-programing/tcp_server.cpp"
 },
 {
-  "directory": "/home/moshiko/advanced-programing-1/build",
-  "command": "/usr/bin/g++    -g   -o CMakeFiles/Client.dir/tcp_client.cpp.o -c /home/moshiko/advanced-programing-1/tcp_client.cpp",
-  "file": "/home/moshiko/advanced-programing-1/tcp_client.cpp"
-},
-{
-  "directory": "/home/moshiko/advanced-programing-1/build",
-  "command": "/usr/bin/g++    -g   -o CMakeFiles/AP.dir/main.cpp.o -c /home/moshiko/advanced-programing-1/main.cpp",
-  "file": "/home/moshiko/advanced-programing-1/main.cpp"
-},
-{
-  "directory": "/home/moshiko/advanced-programing-1/build",
-  "command": "/usr/bin/g++    -g   -o CMakeFiles/AP.dir/Flower.cpp.o -c /home/moshiko/advanced-programing-1/Flower.cpp",
-  "file": "/home/moshiko/advanced-programing-1/Flower.cpp"
+  "directory": "/home/omri/advanced-programing/advanced-programing/build",
+  "command": "/usr/bin/g++    -g   -lpthread -o CMakeFiles/Server.dir/Flower.cpp.o -c /home/omri/advanced-programing/advanced-programing/Flower.cpp",
+  "file": "/home/omri/advanced-programing/advanced-programing/Flower.cpp"
 }
 ]
