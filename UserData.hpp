@@ -20,7 +20,7 @@ public:
         output.clear();
         output.resize(unclassified.size());
         for (Iris t: unclassified) {
-            output.push_back(t.classify(trainingData,k,&Iris::euclideanDistance));
+            output.push_back(t.classify(trainingData, k, &Iris::euclideanDistance));
         }
     }
 
@@ -42,7 +42,5 @@ public:
 
     const vector<string> getOutput(){
         return output;
-    }
-
-    
+    } 
 };

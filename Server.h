@@ -6,7 +6,7 @@ class Server
 private:
     int clientNum = 0;
     int socketId;
-    int queueSize = 5;
+    int maxQueueSize = 5;
     struct sockaddr_in readAddr;
     fd_set readfds;
     struct timeval timeVal;
