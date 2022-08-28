@@ -21,7 +21,7 @@ Server::Server(in_addr_t ip, in_port_t port){
         perror("error binding socket");
     }
 
-    if (listen(socketId, this->queueSize) < 0) {
+    if (listen(socketId, this->maxQueueSize) < 0) {
         perror("error listening to a socket");
     }
 
