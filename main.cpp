@@ -7,7 +7,9 @@
 #include "DisplayResultsCommand.hpp"
 #include "UploadFilesCommand.hpp"
 #include "ClassifyDataCommand.hpp"
+#include "Command.hpp"
 #include "StandardIO.hpp"
+#include "DefaultIO.hpp"
 #include "CLI.hpp"
 #pragma once
 
@@ -33,12 +35,12 @@ int main(int argc, char* argv[])
 void handleClient(int clientSock, Server *server) {
     UserData data();
     StandardIO sio();
-    std::vector<std::unique_ptr<Command>> commands;
-    commands.push_back(std::make_unique<UploadFilesCommand>(&sio, &data));
-    commands.push_back(std::make_unique<ClassifyDataCommand>(&sio, &data));
-    commands.push_back(std::make_unique<DisplayResultsCommand>(&sio, &data));
+    vector<Command> commands;
+    commands.push_back(UploadFilesCommand((DefultIO *)&sio, (UserData*) &data));
+    commands.push_back(ClassifyDataCommand((DefultIO *)&sio, (UserData*) &data));
+    commands.push_back(DisplayResultsCommand((DefultIO *)&sio, (UserData*) &data));
 
-    CLI cli(&sio, std::move(commands));
+    CLI cli((DefultIO *)&sio, std::move(commands));
     cli.start();
-    server->disconnectClient();
+    server->removeClient();
 }

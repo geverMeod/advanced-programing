@@ -3,7 +3,7 @@
 #pragma once
 
 using namespace std;
-class ClassifyDataCommand : Command {
+class ClassifyDataCommand : public Command {
     public:
         
         

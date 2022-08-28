@@ -1,7 +1,7 @@
 #include "Command.hpp"
 #pragma once
 using namespace std;
-class DisplayResultsCommand : Command {
+class DisplayResultsCommand : public Command {
 public:
     void execute() override {
         if (this->getData()->getOutput().size() == 0) {

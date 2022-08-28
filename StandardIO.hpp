@@ -5,7 +5,7 @@
 #pragma once
 
 using namespace std;
-class StandardIO : DefultIO
+class StandardIO : public DefultIO
 {
 private:
     /* data */
