@@ -70,29 +70,29 @@ CMakeFiles/Server.dir/tcp_server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/tcp_server.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omri/advanced-programing/advanced-programing/tcp_server.cpp -o CMakeFiles/Server.dir/tcp_server.cpp.s
 
-CMakeFiles/Server.dir/Flower.cpp.o: CMakeFiles/Server.dir/flags.make
-CMakeFiles/Server.dir/Flower.cpp.o: ../Flower.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omri/advanced-programing/advanced-programing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Server.dir/Flower.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/Flower.cpp.o -c /home/omri/advanced-programing/advanced-programing/Flower.cpp
+CMakeFiles/Server.dir/Iris.cpp.o: CMakeFiles/Server.dir/flags.make
+CMakeFiles/Server.dir/Iris.cpp.o: ../Iris.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omri/advanced-programing/advanced-programing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Server.dir/Iris.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/Iris.cpp.o -c /home/omri/advanced-programing/advanced-programing/Iris.cpp
 
-CMakeFiles/Server.dir/Flower.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Flower.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omri/advanced-programing/advanced-programing/Flower.cpp > CMakeFiles/Server.dir/Flower.cpp.i
+CMakeFiles/Server.dir/Iris.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Iris.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omri/advanced-programing/advanced-programing/Iris.cpp > CMakeFiles/Server.dir/Iris.cpp.i
 
-CMakeFiles/Server.dir/Flower.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Flower.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omri/advanced-programing/advanced-programing/Flower.cpp -o CMakeFiles/Server.dir/Flower.cpp.s
+CMakeFiles/Server.dir/Iris.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Iris.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omri/advanced-programing/advanced-programing/Iris.cpp -o CMakeFiles/Server.dir/Iris.cpp.s
 
 # Object files for target Server
 Server_OBJECTS = \
 "CMakeFiles/Server.dir/tcp_server.cpp.o" \
-"CMakeFiles/Server.dir/Flower.cpp.o"
+"CMakeFiles/Server.dir/Iris.cpp.o"
 
 # External object files for target Server
 Server_EXTERNAL_OBJECTS =
 
 Server: CMakeFiles/Server.dir/tcp_server.cpp.o
-Server: CMakeFiles/Server.dir/Flower.cpp.o
+Server: CMakeFiles/Server.dir/Iris.cpp.o
 Server: CMakeFiles/Server.dir/build.make
 Server: CMakeFiles/Server.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omri/advanced-programing/advanced-programing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Server"

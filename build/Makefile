@@ -533,32 +533,32 @@ Server/fast:
 	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/build
 .PHONY : Server/fast
 
-Flower.o: Flower.cpp.o
+Iris.o: Iris.cpp.o
 
-.PHONY : Flower.o
+.PHONY : Iris.o
 
 # target to build an object file
-Flower.cpp.o:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Flower.cpp.o
-.PHONY : Flower.cpp.o
+Iris.cpp.o:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Iris.cpp.o
+.PHONY : Iris.cpp.o
 
-Flower.i: Flower.cpp.i
+Iris.i: Iris.cpp.i
 
-.PHONY : Flower.i
+.PHONY : Iris.i
 
 # target to preprocess a source file
-Flower.cpp.i:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Flower.cpp.i
-.PHONY : Flower.cpp.i
+Iris.cpp.i:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Iris.cpp.i
+.PHONY : Iris.cpp.i
 
-Flower.s: Flower.cpp.s
+Iris.s: Iris.cpp.s
 
-.PHONY : Flower.s
+.PHONY : Iris.s
 
 # target to generate assembly for a file
-Flower.cpp.s:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Flower.cpp.s
-.PHONY : Flower.cpp.s
+Iris.cpp.s:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Iris.cpp.s
+.PHONY : Iris.cpp.s
 
 tcp_client.o: tcp_client.cpp.o
 
@@ -655,9 +655,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... NightlyMemCheck"
 	@echo "... Server"
-	@echo "... Flower.o"
-	@echo "... Flower.i"
-	@echo "... Flower.s"
+	@echo "... Iris.o"
+	@echo "... Iris.i"
+	@echo "... Iris.s"
 	@echo "... tcp_client.o"
 	@echo "... tcp_client.i"
 	@echo "... tcp_client.s"

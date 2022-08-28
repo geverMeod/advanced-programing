@@ -36,7 +36,7 @@ vector<string> Iris::getFlowerTypes(vector<Iris> flowerVec){
 	}
 	return flowerTypes;
 }
-void Iris::classify(vector<Iris> classifiedVec, int k, double (Iris::*distanceFunction)(Iris)){
+string Iris::classify(vector<Iris> classifiedVec, int k, double (Iris::*distanceFunction)(Iris)){
 	//this function checks the knn for an this flower and classifies it, we assume this flower is not classified.
 	//the function gets the distance function to use while calculating the knn.
 	for (int i = 0; i < classifiedVec.size(); i++) {
@@ -58,6 +58,7 @@ void Iris::classify(vector<Iris> classifiedVec, int k, double (Iris::*distanceFu
 	// now we know that the knn are the first k elements in the vector so we count
 	// how many instances there are of each type and classify this flower to be of the type with the most instances.
 	this->setType(flowerTypes[getMaxElementIndex(numOfFlowerType)]);
+	return this->getType();
 }
 double Iris::euclideanDistance(Iris other) {
 	//the function calculates the euclidean distance between 2 flowers

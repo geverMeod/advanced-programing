@@ -44,5 +44,5 @@ public:
 
 	void setDistance(double distance);
 
-	void classify(vector<Iris> classifiedVec, int k, double (Iris::*distanceFunction)(Iris));
+	string classify(vector<Iris> classifiedVec, int k, double (Iris::*distanceFunction)(Iris));
 };

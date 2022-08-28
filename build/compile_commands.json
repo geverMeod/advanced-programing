@@ -11,7 +11,7 @@
 },
 {
   "directory": "/home/omri/advanced-programing/advanced-programing/build",
-  "command": "/usr/bin/g++    -g   -lpthread -o CMakeFiles/Server.dir/Flower.cpp.o -c /home/omri/advanced-programing/advanced-programing/Flower.cpp",
-  "file": "/home/omri/advanced-programing/advanced-programing/Flower.cpp"
+  "command": "/usr/bin/g++    -g   -lpthread -o CMakeFiles/Server.dir/Iris.cpp.o -c /home/omri/advanced-programing/advanced-programing/Iris.cpp",
+  "file": "/home/omri/advanced-programing/advanced-programing/Iris.cpp"
 }
 ]
