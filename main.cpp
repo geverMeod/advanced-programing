@@ -8,7 +8,7 @@
 #include "UploadFilesCommand.hpp"
 #include "ClassifyDataCommand.hpp"
 #include "StandardIO.hpp"
-
+#include "CLI.hpp"
 #pragma once
 
 void handleClient(int clientSock, Server *server);
@@ -32,13 +32,13 @@ int main(int argc, char* argv[])
 }
 void handleClient(int clientSock, Server *server) {
     UserData data();
-    StandardIO io();
+    StandardIO sio();
     std::vector<std::unique_ptr<Command>> commands;
-    commands.push_back(std::make_unique<UploadFilesCommand>(&io, &data));
-    commands.push_back(std::make_unique<ClassifyDataCommand>(&io, &data));
-    commands.push_back(std::make_unique<DisplayResultsCommand>(&io, &data));
+    commands.push_back(std::make_unique<UploadFilesCommand>(&sio, &data));
+    commands.push_back(std::make_unique<ClassifyDataCommand>(&sio, &data));
+    commands.push_back(std::make_unique<DisplayResultsCommand>(&sio, &data));
 
-    CLI<Iris> cli(&io, std::move(commands));
-    cli.run();
+    CLI cli(&sio, std::move(commands));
+    cli.start();
     server->disconnectClient();
 }
