@@ -8,8 +8,8 @@
 #include "UploadFilesCommand.hpp"
 #include "ClassifyDataCommand.hpp"
 #include "Command.hpp"
-#include "StandardIO.hpp"
-#include "DefaultIO.hpp"
+#include "../StandardIO.hpp"
+#include "../DefaultIO.hpp"
 #include "CLI.hpp"
 #include <pthread.h>
 void handleClient(int clientSock, Server *server);
