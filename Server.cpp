@@ -2,8 +2,8 @@
 #include "cstring"
 #include <iostream>
 
-#include "Server.h"
-
+#include "Server.hpp"
+using namespace std;
 Server::Server(in_addr_t ip, in_port_t port){
     readAddr = sockaddr_in();
     socketId = socket(AF_INET, SOCK_STREAM, 0);
@@ -33,7 +33,7 @@ Server::Server(in_addr_t ip, in_port_t port){
     FD_SET(socketId, &readfds);
 
     //wait for a client to connect.
-    std::cout << "waiting for connection..." << std::endl; 
+    cout << "waiting for connection..." << endl; 
 }
 
 int Server::acceptClient(){

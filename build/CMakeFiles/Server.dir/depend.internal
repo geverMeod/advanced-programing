@@ -4,6 +4,9 @@
 CMakeFiles/Server.dir/Iris.cpp.o
  /home/omri/advanced-programing/advanced-programing/Iris.cpp
  /home/omri/advanced-programing/advanced-programing/Iris.hpp
+CMakeFiles/Server.dir/Server.cpp.o
+ /home/omri/advanced-programing/advanced-programing/Server.cpp
+ /home/omri/advanced-programing/advanced-programing/Server.hpp
 CMakeFiles/Server.dir/main.cpp.o
  /home/omri/advanced-programing/advanced-programing/CLI.hpp
  /home/omri/advanced-programing/advanced-programing/ClassifyDataCommand.hpp
@@ -11,7 +14,7 @@ CMakeFiles/Server.dir/main.cpp.o
  /home/omri/advanced-programing/advanced-programing/DefaultIO.hpp
  /home/omri/advanced-programing/advanced-programing/DisplayResultsCommand.hpp
  /home/omri/advanced-programing/advanced-programing/Iris.hpp
- /home/omri/advanced-programing/advanced-programing/Server.h
+ /home/omri/advanced-programing/advanced-programing/Server.hpp
  /home/omri/advanced-programing/advanced-programing/StandardIO.hpp
  /home/omri/advanced-programing/advanced-programing/UploadFilesCommand.hpp
  /home/omri/advanced-programing/advanced-programing/UserData.hpp

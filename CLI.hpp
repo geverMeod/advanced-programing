@@ -19,7 +19,7 @@ private:
     }
 
 public:
-    CLI(DefultIO *dio, vector<unique_ptr<Command>> commands) : dio(dio), commands(commands) {
+    CLI(DefultIO *dio, vector<unique_ptr<Command>> commands) : dio(dio), commands(move(commands)) {
     }
 
     void start() {

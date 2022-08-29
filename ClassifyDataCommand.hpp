@@ -17,7 +17,7 @@ class ClassifyDataCommand : public Command {
             }
              this->getIO()->write("Started classifying");
             //  thread classify([this] { this->getData()->classify(); });
-            thread classify(&UserData::classify, this->getData());
-            classify.detach();
+            //thread classify(&UserData::classify, this->getData());
+            //classify.detach();
         }
 };

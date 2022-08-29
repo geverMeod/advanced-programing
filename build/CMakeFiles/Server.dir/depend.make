@@ -4,13 +4,16 @@
 CMakeFiles/Server.dir/Iris.cpp.o: ../Iris.cpp
 CMakeFiles/Server.dir/Iris.cpp.o: ../Iris.hpp
 
+CMakeFiles/Server.dir/Server.cpp.o: ../Server.cpp
+CMakeFiles/Server.dir/Server.cpp.o: ../Server.hpp
+
 CMakeFiles/Server.dir/main.cpp.o: ../CLI.hpp
 CMakeFiles/Server.dir/main.cpp.o: ../ClassifyDataCommand.hpp
 CMakeFiles/Server.dir/main.cpp.o: ../Command.hpp
 CMakeFiles/Server.dir/main.cpp.o: ../DefaultIO.hpp
 CMakeFiles/Server.dir/main.cpp.o: ../DisplayResultsCommand.hpp
 CMakeFiles/Server.dir/main.cpp.o: ../Iris.hpp
-CMakeFiles/Server.dir/main.cpp.o: ../Server.h
+CMakeFiles/Server.dir/main.cpp.o: ../Server.hpp
 CMakeFiles/Server.dir/main.cpp.o: ../StandardIO.hpp
 CMakeFiles/Server.dir/main.cpp.o: ../UploadFilesCommand.hpp
 CMakeFiles/Server.dir/main.cpp.o: ../UserData.hpp

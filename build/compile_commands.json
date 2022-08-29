@@ -1,17 +1,22 @@
 [
 {
   "directory": "/home/omri/advanced-programing/advanced-programing/build",
-  "command": "/usr/bin/g++    -g   -lpthread -o CMakeFiles/Client.dir/tcp_client.cpp.o -c /home/omri/advanced-programing/advanced-programing/tcp_client.cpp",
+  "command": "/usr/bin/g++    -g   -pthread -o CMakeFiles/Client.dir/tcp_client.cpp.o -c /home/omri/advanced-programing/advanced-programing/tcp_client.cpp",
   "file": "/home/omri/advanced-programing/advanced-programing/tcp_client.cpp"
 },
 {
   "directory": "/home/omri/advanced-programing/advanced-programing/build",
-  "command": "/usr/bin/g++    -g   -lpthread -o CMakeFiles/Server.dir/main.cpp.o -c /home/omri/advanced-programing/advanced-programing/main.cpp",
+  "command": "/usr/bin/g++    -g   -pthread -o CMakeFiles/Server.dir/main.cpp.o -c /home/omri/advanced-programing/advanced-programing/main.cpp",
   "file": "/home/omri/advanced-programing/advanced-programing/main.cpp"
 },
 {
   "directory": "/home/omri/advanced-programing/advanced-programing/build",
-  "command": "/usr/bin/g++    -g   -lpthread -o CMakeFiles/Server.dir/Iris.cpp.o -c /home/omri/advanced-programing/advanced-programing/Iris.cpp",
+  "command": "/usr/bin/g++    -g   -pthread -o CMakeFiles/Server.dir/Iris.cpp.o -c /home/omri/advanced-programing/advanced-programing/Iris.cpp",
   "file": "/home/omri/advanced-programing/advanced-programing/Iris.cpp"
+},
+{
+  "directory": "/home/omri/advanced-programing/advanced-programing/build",
+  "command": "/usr/bin/g++    -g   -pthread -o CMakeFiles/Server.dir/Server.cpp.o -c /home/omri/advanced-programing/advanced-programing/Server.cpp",
+  "file": "/home/omri/advanced-programing/advanced-programing/Server.cpp"
 }
 ]

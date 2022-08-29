@@ -44,7 +44,17 @@ string
 vector
 -
 
-/home/omri/advanced-programing/advanced-programing/Server.h
+/home/omri/advanced-programing/advanced-programing/Server.cpp
+unistd.h
+-
+cstring
+/home/omri/advanced-programing/advanced-programing/cstring
+iostream
+-
+Server.hpp
+/home/omri/advanced-programing/advanced-programing/Server.hpp
+
+/home/omri/advanced-programing/advanced-programing/Server.hpp
 netinet/in.h
 -
 string
@@ -85,8 +95,8 @@ thread
 /home/omri/advanced-programing/advanced-programing/thread
 UserData.hpp
 /home/omri/advanced-programing/advanced-programing/UserData.hpp
-Server.h
-/home/omri/advanced-programing/advanced-programing/Server.h
+Server.hpp
+/home/omri/advanced-programing/advanced-programing/Server.hpp
 DisplayResultsCommand.hpp
 /home/omri/advanced-programing/advanced-programing/DisplayResultsCommand.hpp
 UploadFilesCommand.hpp
@@ -101,4 +111,6 @@ DefaultIO.hpp
 /home/omri/advanced-programing/advanced-programing/DefaultIO.hpp
 CLI.hpp
 /home/omri/advanced-programing/advanced-programing/CLI.hpp
+pthread.h
+-
 
