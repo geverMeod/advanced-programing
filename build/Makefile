@@ -533,113 +533,140 @@ Server/fast:
 	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/build
 .PHONY : Server/fast
 
-Iris.o: Iris.cpp.o
+Client/Client.o: Client/Client.cpp.o
 
-.PHONY : Iris.o
-
-# target to build an object file
-Iris.cpp.o:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Iris.cpp.o
-.PHONY : Iris.cpp.o
-
-Iris.i: Iris.cpp.i
-
-.PHONY : Iris.i
-
-# target to preprocess a source file
-Iris.cpp.i:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Iris.cpp.i
-.PHONY : Iris.cpp.i
-
-Iris.s: Iris.cpp.s
-
-.PHONY : Iris.s
-
-# target to generate assembly for a file
-Iris.cpp.s:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Iris.cpp.s
-.PHONY : Iris.cpp.s
-
-Server.o: Server.cpp.o
-
-.PHONY : Server.o
+.PHONY : Client/Client.o
 
 # target to build an object file
-Server.cpp.o:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Server.cpp.o
-.PHONY : Server.cpp.o
+Client/Client.cpp.o:
+	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/Client/Client.cpp.o
+.PHONY : Client/Client.cpp.o
 
-Server.i: Server.cpp.i
+Client/Client.i: Client/Client.cpp.i
 
-.PHONY : Server.i
+.PHONY : Client/Client.i
 
 # target to preprocess a source file
-Server.cpp.i:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Server.cpp.i
-.PHONY : Server.cpp.i
+Client/Client.cpp.i:
+	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/Client/Client.cpp.i
+.PHONY : Client/Client.cpp.i
 
-Server.s: Server.cpp.s
+Client/Client.s: Client/Client.cpp.s
 
-.PHONY : Server.s
+.PHONY : Client/Client.s
 
 # target to generate assembly for a file
-Server.cpp.s:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Server.cpp.s
-.PHONY : Server.cpp.s
+Client/Client.cpp.s:
+	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/Client/Client.cpp.s
+.PHONY : Client/Client.cpp.s
 
-main.o: main.cpp.o
+Client/main.o: Client/main.cpp.o
 
-.PHONY : main.o
+.PHONY : Client/main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/main.cpp.o
-.PHONY : main.cpp.o
+Client/main.cpp.o:
+	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/Client/main.cpp.o
+.PHONY : Client/main.cpp.o
 
-main.i: main.cpp.i
+Client/main.i: Client/main.cpp.i
 
-.PHONY : main.i
+.PHONY : Client/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/main.cpp.i
-.PHONY : main.cpp.i
+Client/main.cpp.i:
+	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/Client/main.cpp.i
+.PHONY : Client/main.cpp.i
 
-main.s: main.cpp.s
+Client/main.s: Client/main.cpp.s
 
-.PHONY : main.s
+.PHONY : Client/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/main.cpp.s
-.PHONY : main.cpp.s
+Client/main.cpp.s:
+	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/Client/main.cpp.s
+.PHONY : Client/main.cpp.s
 
-tcp_client.o: tcp_client.cpp.o
+Server/Iris.o: Server/Iris.cpp.o
 
-.PHONY : tcp_client.o
+.PHONY : Server/Iris.o
 
 # target to build an object file
-tcp_client.cpp.o:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/tcp_client.cpp.o
-.PHONY : tcp_client.cpp.o
+Server/Iris.cpp.o:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Server/Iris.cpp.o
+.PHONY : Server/Iris.cpp.o
 
-tcp_client.i: tcp_client.cpp.i
+Server/Iris.i: Server/Iris.cpp.i
 
-.PHONY : tcp_client.i
+.PHONY : Server/Iris.i
 
 # target to preprocess a source file
-tcp_client.cpp.i:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/tcp_client.cpp.i
-.PHONY : tcp_client.cpp.i
+Server/Iris.cpp.i:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Server/Iris.cpp.i
+.PHONY : Server/Iris.cpp.i
 
-tcp_client.s: tcp_client.cpp.s
+Server/Iris.s: Server/Iris.cpp.s
 
-.PHONY : tcp_client.s
+.PHONY : Server/Iris.s
 
 # target to generate assembly for a file
-tcp_client.cpp.s:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/tcp_client.cpp.s
-.PHONY : tcp_client.cpp.s
+Server/Iris.cpp.s:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Server/Iris.cpp.s
+.PHONY : Server/Iris.cpp.s
+
+Server/Server.o: Server/Server.cpp.o
+
+.PHONY : Server/Server.o
+
+# target to build an object file
+Server/Server.cpp.o:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Server/Server.cpp.o
+.PHONY : Server/Server.cpp.o
+
+Server/Server.i: Server/Server.cpp.i
+
+.PHONY : Server/Server.i
+
+# target to preprocess a source file
+Server/Server.cpp.i:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Server/Server.cpp.i
+.PHONY : Server/Server.cpp.i
+
+Server/Server.s: Server/Server.cpp.s
+
+.PHONY : Server/Server.s
+
+# target to generate assembly for a file
+Server/Server.cpp.s:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Server/Server.cpp.s
+.PHONY : Server/Server.cpp.s
+
+Server/main.o: Server/main.cpp.o
+
+.PHONY : Server/main.o
+
+# target to build an object file
+Server/main.cpp.o:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Server/main.cpp.o
+.PHONY : Server/main.cpp.o
+
+Server/main.i: Server/main.cpp.i
+
+.PHONY : Server/main.i
+
+# target to preprocess a source file
+Server/main.cpp.i:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Server/main.cpp.i
+.PHONY : Server/main.cpp.i
+
+Server/main.s: Server/main.cpp.s
+
+.PHONY : Server/main.s
+
+# target to generate assembly for a file
+Server/main.cpp.s:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Server/main.cpp.s
+.PHONY : Server/main.cpp.s
 
 # Help Target
 help:
@@ -682,18 +709,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... NightlyMemCheck"
 	@echo "... Server"
-	@echo "... Iris.o"
-	@echo "... Iris.i"
-	@echo "... Iris.s"
-	@echo "... Server.o"
-	@echo "... Server.i"
-	@echo "... Server.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... tcp_client.o"
-	@echo "... tcp_client.i"
-	@echo "... tcp_client.s"
+	@echo "... Client/Client.o"
+	@echo "... Client/Client.i"
+	@echo "... Client/Client.s"
+	@echo "... Client/main.o"
+	@echo "... Client/main.i"
+	@echo "... Client/main.s"
+	@echo "... Server/Iris.o"
+	@echo "... Server/Iris.i"
+	@echo "... Server/Iris.s"
+	@echo "... Server/Server.o"
+	@echo "... Server/Server.i"
+	@echo "... Server/Server.s"
+	@echo "... Server/main.o"
+	@echo "... Server/main.i"
+	@echo "... Server/main.s"
 .PHONY : help
 
 

@@ -6,20 +6,12 @@
 
 #IncludeRegexTransform: 
 
-/home/omri/advanced-programing/advanced-programing/Iris.hpp
-string
--
-vector
--
-
-/home/omri/advanced-programing/advanced-programing/tcp_client.cpp
+/home/omri/advanced-programing/advanced-programing/Client/Client.cpp
 iostream
 -
 sys/socket.h
 -
 stdio.h
--
-netinet/in.h
 -
 arpa/inet.h
 -
@@ -33,6 +25,28 @@ fstream
 -
 sstream
 -
-Iris.hpp
-/home/omri/advanced-programing/advanced-programing/Iris.hpp
+Client.hpp
+/home/omri/advanced-programing/advanced-programing/Client/Client.hpp
+
+/home/omri/advanced-programing/advanced-programing/Client/Client.hpp
+netinet/in.h
+-
+string
+-
+
+/home/omri/advanced-programing/advanced-programing/Client/main.cpp
+iostream
+-
+sys/socket.h
+-
+netinet/in.h
+-
+arpa/inet.h
+-
+sys/stat.h
+-
+Client.hpp
+/home/omri/advanced-programing/advanced-programing/Client/Client.hpp
+thread
+-
 

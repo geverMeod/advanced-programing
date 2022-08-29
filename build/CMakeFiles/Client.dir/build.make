@@ -57,30 +57,45 @@ include CMakeFiles/Client.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Client.dir/flags.make
 
-CMakeFiles/Client.dir/tcp_client.cpp.o: CMakeFiles/Client.dir/flags.make
-CMakeFiles/Client.dir/tcp_client.cpp.o: ../tcp_client.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omri/advanced-programing/advanced-programing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Client.dir/tcp_client.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Client.dir/tcp_client.cpp.o -c /home/omri/advanced-programing/advanced-programing/tcp_client.cpp
+CMakeFiles/Client.dir/Client/main.cpp.o: CMakeFiles/Client.dir/flags.make
+CMakeFiles/Client.dir/Client/main.cpp.o: ../Client/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omri/advanced-programing/advanced-programing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Client.dir/Client/main.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Client.dir/Client/main.cpp.o -c /home/omri/advanced-programing/advanced-programing/Client/main.cpp
 
-CMakeFiles/Client.dir/tcp_client.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/tcp_client.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omri/advanced-programing/advanced-programing/tcp_client.cpp > CMakeFiles/Client.dir/tcp_client.cpp.i
+CMakeFiles/Client.dir/Client/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/Client/main.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omri/advanced-programing/advanced-programing/Client/main.cpp > CMakeFiles/Client.dir/Client/main.cpp.i
 
-CMakeFiles/Client.dir/tcp_client.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/tcp_client.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omri/advanced-programing/advanced-programing/tcp_client.cpp -o CMakeFiles/Client.dir/tcp_client.cpp.s
+CMakeFiles/Client.dir/Client/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/Client/main.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omri/advanced-programing/advanced-programing/Client/main.cpp -o CMakeFiles/Client.dir/Client/main.cpp.s
+
+CMakeFiles/Client.dir/Client/Client.cpp.o: CMakeFiles/Client.dir/flags.make
+CMakeFiles/Client.dir/Client/Client.cpp.o: ../Client/Client.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omri/advanced-programing/advanced-programing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Client.dir/Client/Client.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Client.dir/Client/Client.cpp.o -c /home/omri/advanced-programing/advanced-programing/Client/Client.cpp
+
+CMakeFiles/Client.dir/Client/Client.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/Client/Client.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omri/advanced-programing/advanced-programing/Client/Client.cpp > CMakeFiles/Client.dir/Client/Client.cpp.i
+
+CMakeFiles/Client.dir/Client/Client.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/Client/Client.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omri/advanced-programing/advanced-programing/Client/Client.cpp -o CMakeFiles/Client.dir/Client/Client.cpp.s
 
 # Object files for target Client
 Client_OBJECTS = \
-"CMakeFiles/Client.dir/tcp_client.cpp.o"
+"CMakeFiles/Client.dir/Client/main.cpp.o" \
+"CMakeFiles/Client.dir/Client/Client.cpp.o"
 
 # External object files for target Client
 Client_EXTERNAL_OBJECTS =
 
-Client: CMakeFiles/Client.dir/tcp_client.cpp.o
+Client: CMakeFiles/Client.dir/Client/main.cpp.o
+Client: CMakeFiles/Client.dir/Client/Client.cpp.o
 Client: CMakeFiles/Client.dir/build.make
 Client: CMakeFiles/Client.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omri/advanced-programing/advanced-programing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omri/advanced-programing/advanced-programing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Client"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Client.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

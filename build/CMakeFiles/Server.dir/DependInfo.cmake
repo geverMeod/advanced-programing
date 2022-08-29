@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/omri/advanced-programing/advanced-programing/Iris.cpp" "/home/omri/advanced-programing/advanced-programing/build/CMakeFiles/Server.dir/Iris.cpp.o"
-  "/home/omri/advanced-programing/advanced-programing/Server.cpp" "/home/omri/advanced-programing/advanced-programing/build/CMakeFiles/Server.dir/Server.cpp.o"
-  "/home/omri/advanced-programing/advanced-programing/main.cpp" "/home/omri/advanced-programing/advanced-programing/build/CMakeFiles/Server.dir/main.cpp.o"
+  "/home/omri/advanced-programing/advanced-programing/Server/Iris.cpp" "/home/omri/advanced-programing/advanced-programing/build/CMakeFiles/Server.dir/Server/Iris.cpp.o"
+  "/home/omri/advanced-programing/advanced-programing/Server/Server.cpp" "/home/omri/advanced-programing/advanced-programing/build/CMakeFiles/Server.dir/Server/Server.cpp.o"
+  "/home/omri/advanced-programing/advanced-programing/Server/main.cpp" "/home/omri/advanced-programing/advanced-programing/build/CMakeFiles/Server.dir/Server/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

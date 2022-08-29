@@ -1,1 +1,1 @@
-/usr/bin/g++  -g  -rdynamic CMakeFiles/Client.dir/tcp_client.cpp.o  -o Client 
+/usr/bin/g++  -g  -rdynamic CMakeFiles/Client.dir/Client/main.cpp.o CMakeFiles/Client.dir/Client/Client.cpp.o  -o Client  -pthread 

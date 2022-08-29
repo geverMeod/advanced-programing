@@ -17,10 +17,8 @@ void *foo(void* a);
 int main(int argc, char* argv[])
 {
     StandardIO sio = StandardIO();
-    Server server(INADDR_ANY, htons(5554));
-    sio.write("lol");
+    Server server(INADDR_ANY, htons(55555));
     int clientSock = server.acceptClient();
-    sio.write("LoL");
     while (true) {
         int clientSock = server.acceptClient();
 

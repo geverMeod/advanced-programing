@@ -57,57 +57,57 @@ include CMakeFiles/Server.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Server.dir/flags.make
 
-CMakeFiles/Server.dir/main.cpp.o: CMakeFiles/Server.dir/flags.make
-CMakeFiles/Server.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omri/advanced-programing/advanced-programing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Server.dir/main.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/main.cpp.o -c /home/omri/advanced-programing/advanced-programing/main.cpp
+CMakeFiles/Server.dir/Server/main.cpp.o: CMakeFiles/Server.dir/flags.make
+CMakeFiles/Server.dir/Server/main.cpp.o: ../Server/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omri/advanced-programing/advanced-programing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Server.dir/Server/main.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/Server/main.cpp.o -c /home/omri/advanced-programing/advanced-programing/Server/main.cpp
 
-CMakeFiles/Server.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/main.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omri/advanced-programing/advanced-programing/main.cpp > CMakeFiles/Server.dir/main.cpp.i
+CMakeFiles/Server.dir/Server/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Server/main.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omri/advanced-programing/advanced-programing/Server/main.cpp > CMakeFiles/Server.dir/Server/main.cpp.i
 
-CMakeFiles/Server.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/main.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omri/advanced-programing/advanced-programing/main.cpp -o CMakeFiles/Server.dir/main.cpp.s
+CMakeFiles/Server.dir/Server/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Server/main.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omri/advanced-programing/advanced-programing/Server/main.cpp -o CMakeFiles/Server.dir/Server/main.cpp.s
 
-CMakeFiles/Server.dir/Iris.cpp.o: CMakeFiles/Server.dir/flags.make
-CMakeFiles/Server.dir/Iris.cpp.o: ../Iris.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omri/advanced-programing/advanced-programing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Server.dir/Iris.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/Iris.cpp.o -c /home/omri/advanced-programing/advanced-programing/Iris.cpp
+CMakeFiles/Server.dir/Server/Iris.cpp.o: CMakeFiles/Server.dir/flags.make
+CMakeFiles/Server.dir/Server/Iris.cpp.o: ../Server/Iris.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omri/advanced-programing/advanced-programing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Server.dir/Server/Iris.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/Server/Iris.cpp.o -c /home/omri/advanced-programing/advanced-programing/Server/Iris.cpp
 
-CMakeFiles/Server.dir/Iris.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Iris.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omri/advanced-programing/advanced-programing/Iris.cpp > CMakeFiles/Server.dir/Iris.cpp.i
+CMakeFiles/Server.dir/Server/Iris.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Server/Iris.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omri/advanced-programing/advanced-programing/Server/Iris.cpp > CMakeFiles/Server.dir/Server/Iris.cpp.i
 
-CMakeFiles/Server.dir/Iris.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Iris.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omri/advanced-programing/advanced-programing/Iris.cpp -o CMakeFiles/Server.dir/Iris.cpp.s
+CMakeFiles/Server.dir/Server/Iris.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Server/Iris.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omri/advanced-programing/advanced-programing/Server/Iris.cpp -o CMakeFiles/Server.dir/Server/Iris.cpp.s
 
-CMakeFiles/Server.dir/Server.cpp.o: CMakeFiles/Server.dir/flags.make
-CMakeFiles/Server.dir/Server.cpp.o: ../Server.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omri/advanced-programing/advanced-programing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Server.dir/Server.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/Server.cpp.o -c /home/omri/advanced-programing/advanced-programing/Server.cpp
+CMakeFiles/Server.dir/Server/Server.cpp.o: CMakeFiles/Server.dir/flags.make
+CMakeFiles/Server.dir/Server/Server.cpp.o: ../Server/Server.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omri/advanced-programing/advanced-programing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Server.dir/Server/Server.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/Server/Server.cpp.o -c /home/omri/advanced-programing/advanced-programing/Server/Server.cpp
 
-CMakeFiles/Server.dir/Server.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Server.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omri/advanced-programing/advanced-programing/Server.cpp > CMakeFiles/Server.dir/Server.cpp.i
+CMakeFiles/Server.dir/Server/Server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Server/Server.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omri/advanced-programing/advanced-programing/Server/Server.cpp > CMakeFiles/Server.dir/Server/Server.cpp.i
 
-CMakeFiles/Server.dir/Server.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Server.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omri/advanced-programing/advanced-programing/Server.cpp -o CMakeFiles/Server.dir/Server.cpp.s
+CMakeFiles/Server.dir/Server/Server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Server/Server.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omri/advanced-programing/advanced-programing/Server/Server.cpp -o CMakeFiles/Server.dir/Server/Server.cpp.s
 
 # Object files for target Server
 Server_OBJECTS = \
-"CMakeFiles/Server.dir/main.cpp.o" \
-"CMakeFiles/Server.dir/Iris.cpp.o" \
-"CMakeFiles/Server.dir/Server.cpp.o"
+"CMakeFiles/Server.dir/Server/main.cpp.o" \
+"CMakeFiles/Server.dir/Server/Iris.cpp.o" \
+"CMakeFiles/Server.dir/Server/Server.cpp.o"
 
 # External object files for target Server
 Server_EXTERNAL_OBJECTS =
 
-Server: CMakeFiles/Server.dir/main.cpp.o
-Server: CMakeFiles/Server.dir/Iris.cpp.o
-Server: CMakeFiles/Server.dir/Server.cpp.o
+Server: CMakeFiles/Server.dir/Server/main.cpp.o
+Server: CMakeFiles/Server.dir/Server/Iris.cpp.o
+Server: CMakeFiles/Server.dir/Server/Server.cpp.o
 Server: CMakeFiles/Server.dir/build.make
 Server: CMakeFiles/Server.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omri/advanced-programing/advanced-programing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Server"

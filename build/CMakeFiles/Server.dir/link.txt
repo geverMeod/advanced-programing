@@ -1,1 +1,1 @@
-/usr/bin/g++  -g  -rdynamic CMakeFiles/Server.dir/main.cpp.o CMakeFiles/Server.dir/Iris.cpp.o CMakeFiles/Server.dir/Server.cpp.o  -o Server  -pthread 
+/usr/bin/g++  -g  -rdynamic CMakeFiles/Server.dir/Server/main.cpp.o CMakeFiles/Server.dir/Server/Iris.cpp.o CMakeFiles/Server.dir/Server/Server.cpp.o  -o Server  -pthread 
