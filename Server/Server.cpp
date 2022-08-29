@@ -47,6 +47,7 @@ int Server::acceptClient(){
             perror("error accepting client");
         }
         this->clientNum++;
+        cout << "accepted a new client\n"; 
         return sock;
     }
     return -1;

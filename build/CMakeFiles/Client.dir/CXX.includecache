@@ -6,28 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/omri/advanced-programing/advanced-programing/Client/Client.cpp
-iostream
--
-sys/socket.h
--
-stdio.h
--
-arpa/inet.h
--
-unistd.h
--
-string.h
--
-string
--
-fstream
--
-sstream
--
-Client.hpp
-/home/omri/advanced-programing/advanced-programing/Client/Client.hpp
-
 /home/omri/advanced-programing/advanced-programing/Client/Client.hpp
 netinet/in.h
 -
