@@ -560,6 +560,33 @@ Iris.cpp.s:
 	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Iris.cpp.s
 .PHONY : Iris.cpp.s
 
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/main.cpp.s
+.PHONY : main.cpp.s
+
 tcp_client.o: tcp_client.cpp.o
 
 .PHONY : tcp_client.o
@@ -586,33 +613,6 @@ tcp_client.s: tcp_client.cpp.s
 tcp_client.cpp.s:
 	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/tcp_client.cpp.s
 .PHONY : tcp_client.cpp.s
-
-tcp_server.o: tcp_server.cpp.o
-
-.PHONY : tcp_server.o
-
-# target to build an object file
-tcp_server.cpp.o:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/tcp_server.cpp.o
-.PHONY : tcp_server.cpp.o
-
-tcp_server.i: tcp_server.cpp.i
-
-.PHONY : tcp_server.i
-
-# target to preprocess a source file
-tcp_server.cpp.i:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/tcp_server.cpp.i
-.PHONY : tcp_server.cpp.i
-
-tcp_server.s: tcp_server.cpp.s
-
-.PHONY : tcp_server.s
-
-# target to generate assembly for a file
-tcp_server.cpp.s:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/tcp_server.cpp.s
-.PHONY : tcp_server.cpp.s
 
 # Help Target
 help:
@@ -658,12 +658,12 @@ help:
 	@echo "... Iris.o"
 	@echo "... Iris.i"
 	@echo "... Iris.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 	@echo "... tcp_client.o"
 	@echo "... tcp_client.i"
 	@echo "... tcp_client.s"
-	@echo "... tcp_server.o"
-	@echo "... tcp_server.i"
-	@echo "... tcp_server.s"
 .PHONY : help
 
 

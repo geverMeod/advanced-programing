@@ -7,19 +7,19 @@ using namespace std;
 class CLI {
 private:
     DefultIO *dio;
-    vector<Command> commands; //maybe make pointer
+    vector<unique_ptr<Command>> commands; //maybe make pointer
 
     void printCommandMenu() {
         string msg = "Welcome to the KNN Classifier Server. Please choose an option:";
         for (int i = 0; i < commands.size(); i++) {
-            msg.append("\n" + to_string(i + 1) + ". " + (commands.at(i)).getDescription());
+            msg.append("\n" + to_string(i + 1) + ". " + (commands.at(i))->getDescription());
         }
         msg.append("\n" + to_string(commands.size() + 1) + ". exit");
         dio->write(msg);
     }
 
 public:
-    CLI(DefultIO *dio, vector<Command> commands) : dio(dio), commands(move(commands)) {
+    CLI(DefultIO *dio, vector<unique_ptr<Command>> commands) : dio(dio), commands(commands) {
     }
 
     void start() {
@@ -42,7 +42,7 @@ public:
                 dio->write("exit");
                 break;
             }
-            commands.at(option).execute();
+            commands.at(option)->execute();
         }
     }
 };

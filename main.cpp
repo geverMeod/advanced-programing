@@ -11,7 +11,6 @@
 #include "StandardIO.hpp"
 #include "DefaultIO.hpp"
 #include "CLI.hpp"
-#pragma once
 
 void handleClient(int clientSock, Server *server);
 
@@ -26,7 +25,7 @@ int main(int argc, char* argv[])
         if (clientSock == -1) {
             break;
         }
-        std::thread handlingClient(handleClient, clientSock, &server);
+        thread handlingClient(handleClient, clientSock, &server);
         handlingClient.detach();
     }
     while (server.getClientNum()) {}
@@ -35,12 +34,12 @@ int main(int argc, char* argv[])
 void handleClient(int clientSock, Server *server) {
     UserData data();
     StandardIO sio();
-    vector<Command> commands;
-    commands.push_back(UploadFilesCommand((DefultIO *)&sio, (UserData*) &data));
-    commands.push_back(ClassifyDataCommand((DefultIO *)&sio, (UserData*) &data));
-    commands.push_back(DisplayResultsCommand((DefultIO *)&sio, (UserData*) &data));
+    vector<unique_ptr<Command>> commands;
+    commands.emplace_back(make_unique<UploadFilesCommand>((DefultIO *)&sio, (UserData*) &data));
+    commands.emplace_back(make_unique<ClassifyDataCommand>((DefultIO *)&sio, (UserData*) &data));
+    commands.emplace_back(make_unique<DisplayResultsCommand>((DefultIO *)&sio, (UserData*) &data));
 
-    CLI cli((DefultIO *)&sio, std::move(commands));
+    CLI cli((DefultIO *)&sio, commands);
     cli.start();
     server->removeClient();
 }

@@ -6,8 +6,8 @@
 },
 {
   "directory": "/home/omri/advanced-programing/advanced-programing/build",
-  "command": "/usr/bin/g++    -g   -lpthread -o CMakeFiles/Server.dir/tcp_server.cpp.o -c /home/omri/advanced-programing/advanced-programing/tcp_server.cpp",
-  "file": "/home/omri/advanced-programing/advanced-programing/tcp_server.cpp"
+  "command": "/usr/bin/g++    -g   -lpthread -o CMakeFiles/Server.dir/main.cpp.o -c /home/omri/advanced-programing/advanced-programing/main.cpp",
+  "file": "/home/omri/advanced-programing/advanced-programing/main.cpp"
 },
 {
   "directory": "/home/omri/advanced-programing/advanced-programing/build",

@@ -42,7 +42,7 @@ int Server::acceptClient(){
     }
     if (FD_ISSET(socketId, &readfds)) {
         unsigned int addrLen = sizeof(this->readAddr);
-        int sock = ::accept(socketId, (struct sockaddr *) &readAddr, &addrLen);
+        int sock = accept(socketId, (struct sockaddr *) &readAddr, &addrLen);
         if (sock < 0) {
             perror("error accepting client");
         }

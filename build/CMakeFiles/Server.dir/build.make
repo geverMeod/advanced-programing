@@ -57,18 +57,18 @@ include CMakeFiles/Server.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Server.dir/flags.make
 
-CMakeFiles/Server.dir/tcp_server.cpp.o: CMakeFiles/Server.dir/flags.make
-CMakeFiles/Server.dir/tcp_server.cpp.o: ../tcp_server.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omri/advanced-programing/advanced-programing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Server.dir/tcp_server.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/tcp_server.cpp.o -c /home/omri/advanced-programing/advanced-programing/tcp_server.cpp
+CMakeFiles/Server.dir/main.cpp.o: CMakeFiles/Server.dir/flags.make
+CMakeFiles/Server.dir/main.cpp.o: ../main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omri/advanced-programing/advanced-programing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Server.dir/main.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/main.cpp.o -c /home/omri/advanced-programing/advanced-programing/main.cpp
 
-CMakeFiles/Server.dir/tcp_server.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/tcp_server.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omri/advanced-programing/advanced-programing/tcp_server.cpp > CMakeFiles/Server.dir/tcp_server.cpp.i
+CMakeFiles/Server.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/main.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omri/advanced-programing/advanced-programing/main.cpp > CMakeFiles/Server.dir/main.cpp.i
 
-CMakeFiles/Server.dir/tcp_server.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/tcp_server.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omri/advanced-programing/advanced-programing/tcp_server.cpp -o CMakeFiles/Server.dir/tcp_server.cpp.s
+CMakeFiles/Server.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/main.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omri/advanced-programing/advanced-programing/main.cpp -o CMakeFiles/Server.dir/main.cpp.s
 
 CMakeFiles/Server.dir/Iris.cpp.o: CMakeFiles/Server.dir/flags.make
 CMakeFiles/Server.dir/Iris.cpp.o: ../Iris.cpp
@@ -85,13 +85,13 @@ CMakeFiles/Server.dir/Iris.cpp.s: cmake_force
 
 # Object files for target Server
 Server_OBJECTS = \
-"CMakeFiles/Server.dir/tcp_server.cpp.o" \
+"CMakeFiles/Server.dir/main.cpp.o" \
 "CMakeFiles/Server.dir/Iris.cpp.o"
 
 # External object files for target Server
 Server_EXTERNAL_OBJECTS =
 
-Server: CMakeFiles/Server.dir/tcp_server.cpp.o
+Server: CMakeFiles/Server.dir/main.cpp.o
 Server: CMakeFiles/Server.dir/Iris.cpp.o
 Server: CMakeFiles/Server.dir/build.make
 Server: CMakeFiles/Server.dir/link.txt
