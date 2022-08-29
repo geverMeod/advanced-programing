@@ -11,6 +11,11 @@
 },
 {
   "directory": "/home/omri/advanced-programing/advanced-programing/build",
+  "command": "/usr/bin/g++    -g   -pthread -o CMakeFiles/Client.dir/utilityFunctions.cpp.o -c /home/omri/advanced-programing/advanced-programing/utilityFunctions.cpp",
+  "file": "/home/omri/advanced-programing/advanced-programing/utilityFunctions.cpp"
+},
+{
+  "directory": "/home/omri/advanced-programing/advanced-programing/build",
   "command": "/usr/bin/g++    -g   -pthread -o CMakeFiles/Server.dir/Server/main.cpp.o -c /home/omri/advanced-programing/advanced-programing/Server/main.cpp",
   "file": "/home/omri/advanced-programing/advanced-programing/Server/main.cpp"
 },
@@ -23,5 +28,10 @@
   "directory": "/home/omri/advanced-programing/advanced-programing/build",
   "command": "/usr/bin/g++    -g   -pthread -o CMakeFiles/Server.dir/Server/Server.cpp.o -c /home/omri/advanced-programing/advanced-programing/Server/Server.cpp",
   "file": "/home/omri/advanced-programing/advanced-programing/Server/Server.cpp"
+},
+{
+  "directory": "/home/omri/advanced-programing/advanced-programing/build",
+  "command": "/usr/bin/g++    -g   -pthread -o CMakeFiles/Server.dir/utilityFunctions.cpp.o -c /home/omri/advanced-programing/advanced-programing/utilityFunctions.cpp",
+  "file": "/home/omri/advanced-programing/advanced-programing/utilityFunctions.cpp"
 }
 ]

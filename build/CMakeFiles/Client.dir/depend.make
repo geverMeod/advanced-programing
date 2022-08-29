@@ -3,7 +3,11 @@
 
 CMakeFiles/Client.dir/Client/Client.cpp.o: ../Client/Client.cpp
 CMakeFiles/Client.dir/Client/Client.cpp.o: ../Client/Client.hpp
+CMakeFiles/Client.dir/Client/Client.cpp.o: ../utilityFunctions.hpp
 
 CMakeFiles/Client.dir/Client/main.cpp.o: ../Client/Client.hpp
 CMakeFiles/Client.dir/Client/main.cpp.o: ../Client/main.cpp
+
+CMakeFiles/Client.dir/utilityFunctions.cpp.o: ../utilityFunctions.cpp
+CMakeFiles/Client.dir/utilityFunctions.cpp.o: ../utilityFunctions.hpp
 

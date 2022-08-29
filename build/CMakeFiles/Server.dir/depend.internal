@@ -18,4 +18,9 @@ CMakeFiles/Server.dir/Server/main.cpp.o
  /home/omri/advanced-programing/advanced-programing/Server/UploadFilesCommand.hpp
  /home/omri/advanced-programing/advanced-programing/Server/UserData.hpp
  /home/omri/advanced-programing/advanced-programing/Server/main.cpp
+ /home/omri/advanced-programing/advanced-programing/SocketIO.hpp
  /home/omri/advanced-programing/advanced-programing/StandardIO.hpp
+ /home/omri/advanced-programing/advanced-programing/utilityFunctions.hpp
+CMakeFiles/Server.dir/utilityFunctions.cpp.o
+ /home/omri/advanced-programing/advanced-programing/utilityFunctions.cpp
+ /home/omri/advanced-programing/advanced-programing/utilityFunctions.hpp

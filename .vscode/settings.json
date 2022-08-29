@@ -48,6 +48,7 @@
         "ctime": "cpp",
         "ratio": "cpp",
         "thread": "cpp",
-        "cstring": "cpp"
+        "cstring": "cpp",
+        "regex": "cpp"
     }
 }

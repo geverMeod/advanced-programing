@@ -11,7 +11,7 @@ void handleMessage(const string &msg, Client *client);
 void receiving(Client *client);
 
 int main() {
-    Client client(inet_addr("127.0.0.1"), htons(55558));
+    Client client(inet_addr("127.0.0.1"), htons(55551));
     thread thread(receiving, &client);
     while (true) {
         string response;

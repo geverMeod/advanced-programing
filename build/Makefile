@@ -668,6 +668,36 @@ Server/main.cpp.s:
 	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Server/main.cpp.s
 .PHONY : Server/main.cpp.s
 
+utilityFunctions.o: utilityFunctions.cpp.o
+
+.PHONY : utilityFunctions.o
+
+# target to build an object file
+utilityFunctions.cpp.o:
+	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/utilityFunctions.cpp.o
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/utilityFunctions.cpp.o
+.PHONY : utilityFunctions.cpp.o
+
+utilityFunctions.i: utilityFunctions.cpp.i
+
+.PHONY : utilityFunctions.i
+
+# target to preprocess a source file
+utilityFunctions.cpp.i:
+	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/utilityFunctions.cpp.i
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/utilityFunctions.cpp.i
+.PHONY : utilityFunctions.cpp.i
+
+utilityFunctions.s: utilityFunctions.cpp.s
+
+.PHONY : utilityFunctions.s
+
+# target to generate assembly for a file
+utilityFunctions.cpp.s:
+	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/utilityFunctions.cpp.s
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/utilityFunctions.cpp.s
+.PHONY : utilityFunctions.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -724,6 +754,9 @@ help:
 	@echo "... Server/main.o"
 	@echo "... Server/main.i"
 	@echo "... Server/main.s"
+	@echo "... utilityFunctions.o"
+	@echo "... utilityFunctions.i"
+	@echo "... utilityFunctions.s"
 .PHONY : help
 
 

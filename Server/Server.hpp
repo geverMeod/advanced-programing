@@ -1,6 +1,6 @@
 #include <netinet/in.h>
 #include "string"
-
+#pragma once
 class Server
 {
 private:

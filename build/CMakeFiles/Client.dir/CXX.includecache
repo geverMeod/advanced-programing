@@ -6,25 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/omri/advanced-programing/advanced-programing/Client/Client.hpp
+/home/omri/advanced-programing/advanced-programing/utilityFunctions.cpp
+utilityFunctions.hpp
+/home/omri/advanced-programing/advanced-programing/utilityFunctions.hpp
 netinet/in.h
 -
-string
+cstring
 -
 
-/home/omri/advanced-programing/advanced-programing/Client/main.cpp
-iostream
--
-sys/socket.h
--
-netinet/in.h
--
-arpa/inet.h
--
-sys/stat.h
--
-Client.hpp
-/home/omri/advanced-programing/advanced-programing/Client/Client.hpp
-thread
+/home/omri/advanced-programing/advanced-programing/utilityFunctions.hpp
+string
 -
 

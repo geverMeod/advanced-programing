@@ -4,6 +4,10 @@
 CMakeFiles/Client.dir/Client/Client.cpp.o
  /home/omri/advanced-programing/advanced-programing/Client/Client.cpp
  /home/omri/advanced-programing/advanced-programing/Client/Client.hpp
+ /home/omri/advanced-programing/advanced-programing/utilityFunctions.hpp
 CMakeFiles/Client.dir/Client/main.cpp.o
  /home/omri/advanced-programing/advanced-programing/Client/Client.hpp
  /home/omri/advanced-programing/advanced-programing/Client/main.cpp
+CMakeFiles/Client.dir/utilityFunctions.cpp.o
+ /home/omri/advanced-programing/advanced-programing/utilityFunctions.cpp
+ /home/omri/advanced-programing/advanced-programing/utilityFunctions.hpp

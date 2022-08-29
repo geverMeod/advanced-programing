@@ -9,18 +9,16 @@
 #include "ClassifyDataCommand.hpp"
 #include "Command.hpp"
 #include "../StandardIO.hpp"
-#include "../DefaultIO.hpp"
+#include "../SocketIO.hpp"
 #include "CLI.hpp"
 #include <pthread.h>
 void handleClient(int clientSock, Server *server);
 void *foo(void* a);
 int main(int argc, char* argv[])
 {
-    StandardIO sio = StandardIO();
-    Server server(INADDR_ANY, htons(55558));
+    Server server(INADDR_ANY, htons(55551));
     while (true) {
         int clientSock = server.acceptClient();
-
         if (clientSock == -1) {
             break;
         }
@@ -34,7 +32,7 @@ int main(int argc, char* argv[])
 
 void handleClient(int clientSock, Server *server) {
     UserData data = UserData();
-    StandardIO sio = StandardIO();
+    SocketIO sio = SocketIO(clientSock);
     vector<unique_ptr<Command>> commands;
     commands.emplace_back(make_unique<UploadFilesCommand>(&sio, &data));
     commands.emplace_back(make_unique<ClassifyDataCommand>(&sio, &data));

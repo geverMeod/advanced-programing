@@ -17,5 +17,10 @@ CMakeFiles/Server.dir/Server/main.cpp.o: ../Server/Server.hpp
 CMakeFiles/Server.dir/Server/main.cpp.o: ../Server/UploadFilesCommand.hpp
 CMakeFiles/Server.dir/Server/main.cpp.o: ../Server/UserData.hpp
 CMakeFiles/Server.dir/Server/main.cpp.o: ../Server/main.cpp
+CMakeFiles/Server.dir/Server/main.cpp.o: ../SocketIO.hpp
 CMakeFiles/Server.dir/Server/main.cpp.o: ../StandardIO.hpp
+CMakeFiles/Server.dir/Server/main.cpp.o: ../utilityFunctions.hpp
+
+CMakeFiles/Server.dir/utilityFunctions.cpp.o: ../utilityFunctions.cpp
+CMakeFiles/Server.dir/utilityFunctions.cpp.o: ../utilityFunctions.hpp
 

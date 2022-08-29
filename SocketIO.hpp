@@ -1,4 +1,5 @@
 #include "DefaultIO.hpp"
+#include "utilityFunctions.hpp"
 #include "string"
 #include "Server/Server.hpp"
 #include <unistd.h>
@@ -13,25 +14,12 @@ private:
 public:
     explicit SocketIO(int sock) : sock(sock) {}
 
-    string SocketIO::read() {
-        string msg;
-        //add format detection, maybe make this a utility function
-        char buffer[1];
-        buffer[0] = 0;
-        int expected_data_len = sizeof(buffer);
-        int read_bytes = recv(sock, buffer, expected_data_len, 0);
-        if (read_bytes < 0) {
-            perror("error reading from socket");
-        }
-        msg.append(buffer);
-        return msg;
+    string read() {
+        return receive(sock);
     }
 
-    void SocketIO::write(string msg) {
-        int sent_bytes = ::send(sock, msg.c_str(), msg.size(), 0);
-        if (sent_bytes < 0) {
-            perror("error while sending message");
-        }
+    void write(string msg) {
+        send(sock, msg);
     }
 
     ~SocketIO()
