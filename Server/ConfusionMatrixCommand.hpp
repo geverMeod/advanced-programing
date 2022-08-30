@@ -21,7 +21,7 @@ public:
         }
         //Create a map containing all predictions and types
         map<string, map<string, double>> typeMap;
-        for (int i = 0; i < expectations.size(); i++) {
+        for (int i = 0; i < test.size(); i++) {
             if (!typeMap[test[i].getType()].count(predictions[i])) {
                 typeMap[test[i].getType()][predictions[i]] = 0;
             }
