@@ -12,13 +12,13 @@ private:
 
 	static bool comparison(Iris a, Iris b);
 	
-	bool contains(vector<string> vec, string s);
-
-	vector<string> getFlowerTypes(vector<Iris> flowerVec);
+	static bool contains(vector<string> vec, string s);
 
 	int getMaxElementIndex(vector<int> vector);
 
 public:
+
+	static vector<string> getFlowerTypes(vector<Iris> flowerVec);
 
 	double euclideanDistance(Iris other);
 

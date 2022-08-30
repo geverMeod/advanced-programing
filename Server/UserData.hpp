@@ -8,7 +8,9 @@ private:
     //user data to be classified
     vector<Iris> unclassified;
     //the classified output
-    vector<std::string> output;
+    vector<string> output;
+    //all of the iris types in the output, calculated in the classify method
+    vector<string> irisTypes;
 
     int k;
 
@@ -22,7 +24,7 @@ public:
         for (int i = 0; i < unclassified.size(); i++){
             output.at(i) = unclassified.at(i).classify(trainingData, 3, &Iris::euclideanDistance);//add more distance functions
         }
-        
+        irisTypes = Iris::getFlowerTypes(trainingData);
     }
 
     const vector<Iris> getTrainingData() const {
