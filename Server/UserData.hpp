@@ -19,9 +19,10 @@ public:
     void classify() {
         output.clear();
         output.resize(unclassified.size());
-        for (Iris t: unclassified) {
-            output.push_back(t.classify(trainingData, k, &Iris::euclideanDistance)); //add more distance functions
+        for (int i = 0; i < unclassified.size(); i++){
+            output.at(i) = unclassified.at(i).classify(trainingData, 3, &Iris::euclideanDistance);//add more distance functions
         }
+        
     }
 
     const vector<Iris> getTrainingData() const {

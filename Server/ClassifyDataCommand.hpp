@@ -15,9 +15,9 @@ class ClassifyDataCommand : public Command {
                 this->getIO()->write("Please upload files first");
                 return;
             }
-             this->getIO()->write("Started classifying");
-            //  thread classify([this] { this->getData()->classify(); });
-            //thread classify(&UserData::classify, this->getData());
-            //classify.detach();
+            this->getIO()->write("Started classifying");
+            //thread classify([this] { this->getData()->classify(); });
+            thread classify(&UserData::classify, this->getData());
+            classify.detach();
         }
 };

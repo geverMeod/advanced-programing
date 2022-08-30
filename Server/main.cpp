@@ -16,13 +16,12 @@ void handleClient(int clientSock, Server *server);
 void *foo(void* a);
 int main(int argc, char* argv[])
 {
-    Server server(INADDR_ANY, htons(55551));
+    Server server(INADDR_ANY, htons(55540));
     while (true) {
         int clientSock = server.acceptClient();
         if (clientSock == -1) {
             break;
         }
-        pthread_t t;
         thread handlingClient(handleClient, clientSock, &server);
         handlingClient.detach();
     }

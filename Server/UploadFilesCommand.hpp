@@ -64,6 +64,9 @@ vector<Iris> getIrisVecFromFile(string fileName, bool isClassified)
 {
 	ifstream classified;
 	classified.open(fileName);
+    if(!classified.is_open()){
+        throw std::runtime_error("Could not open file");
+    }
 	vector<Iris> classifiedVec;
 	while (classified.good()) {
 		string line;

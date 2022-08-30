@@ -42,6 +42,15 @@ public:
 		return this->distance;
 	}
 
+	string const toString() const{
+		string retVal("");
+		for(double d:attributes){
+			retVal.append(to_string(d) + ",");
+		}
+		retVal.append(type);
+		return retVal;
+	}
+
 	void setDistance(double distance);
 
 	string classify(vector<Iris> classifiedVec, int k, double (Iris::*distanceFunction)(Iris));
