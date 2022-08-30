@@ -12,18 +12,28 @@ private:
     //all of the iris types in the output, calculated in the classify method
     vector<string> irisTypes;
 
-    double distanceFunction(Iris); 
+    string distanceFunction;
+
     int k;
 
 public:
     UserData() :
-        trainingData(), unclassified(), output(){}
+        trainingData(), unclassified(), output(), k(5), distanceFunction("EUC"){}
 
     void classify() {
         output.clear();
         output.resize(unclassified.size());
         for (int i = 0; i < unclassified.size(); i++){
-            output.at(i) = unclassified.at(i).classify(trainingData, 3, &Iris::euclideanDistance);//add more distance functions
+            if (distanceFunction.compare("EUC"))
+            {
+                output.at(i) = unclassified.at(i).classify(trainingData, k, &Iris::euclideanDistance);
+            } else if (distanceFunction.compare("MAN"))
+            {
+                output.at(i) = unclassified.at(i).classify(trainingData, k, &Iris::manhattanDistance);
+            } else if (distanceFunction.compare("CHE"))
+            {
+                output.at(i) = unclassified.at(i).classify(trainingData, k, &Iris::chebyshevDistance);
+            }
         }
         irisTypes = Iris::getFlowerTypes(trainingData);
     }
@@ -50,5 +60,22 @@ public:
 
     vector<string> getIrisTypes(){
         return this->irisTypes;
+    }
+    string getDistanceFunction(){
+        return this->distanceFunction;
+    }
+    int setDistanceFunction(string s){
+        if (!(s.compare("EUC")||s.compare("MAN")||s.compare("CHE"))){
+            return -1;
+        }
+        this->distanceFunction = s;
+        return 0;
+    }
+    int getK(){
+        return this->k;
+    }
+    string getSettingsString(){
+        return "The current KNN paramethers are: k = " + to_string(this->getK()) +
+                                ", distance metric = " + this->getDistanceFunction();
     }
 };
