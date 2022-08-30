@@ -12,6 +12,7 @@ private:
     //all of the iris types in the output, calculated in the classify method
     vector<string> irisTypes;
 
+    double distanceFunction(Iris); 
     int k;
 
 public:
@@ -46,4 +47,8 @@ public:
     const vector<string> getOutput(){
         return output;
     } 
+
+    vector<string> getIrisTypes(){
+        return this->irisTypes;
+    }
 };
