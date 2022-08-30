@@ -49,6 +49,7 @@
         "ratio": "cpp",
         "thread": "cpp",
         "cstring": "cpp",
-        "regex": "cpp"
+        "regex": "cpp",
+        "bitset": "cpp"
     }
 }
