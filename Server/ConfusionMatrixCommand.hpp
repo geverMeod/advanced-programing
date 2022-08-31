@@ -48,15 +48,7 @@ public:
                 }
             }
         }
-        //Convert the map to a 2d vector of strings
-        // vector<vector<string>> confusionMatrix;
-        // for (const pair<string, map<string, double>> &predictionPercentage: typeCountMap) {
-        //     vector<string> typePredictions;
-        //     for (const pair<string, double> &prediction: predictionPercentage.second) {
-        //         typePredictions.push_back(to_string(prediction.second));
-        //     }
-        //     confusionMatrix.push_back(typePredictions);
-        // }
+        
         string confusionMatrixStr("\t\t");
         for(string type: irisTypes){
             confusionMatrixStr.append(type + "\t");

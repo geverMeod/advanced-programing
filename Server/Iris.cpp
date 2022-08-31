@@ -10,7 +10,7 @@ bool Iris::comparison(Iris a, Iris b)
 	return (a.getDistance() < b.getDistance());
 }
 //returns true if the str vector contains s.
-static bool contains(vector<string> vec, string s) {
+bool Iris::contains(vector<string> vec, string s) {
 	for (string x : vec) {
 		if (x.compare(s) == 0) return true;
 	}
@@ -25,7 +25,7 @@ int Iris::getMaxElementIndex(vector<int> vector){
 	}
 	return maxElementIdx;
 }
-static vector<string> getFlowerTypes(vector<Iris> flowerVec){
+vector<string> Iris::getFlowerTypes(vector<Iris> flowerVec){
 	//returns all the flower types in a vector of flowers.
 	//in our database it returns all the iris types there are.
 	vector<string> flowerTypes;
