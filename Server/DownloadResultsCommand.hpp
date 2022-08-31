@@ -18,7 +18,13 @@ public:
         }
         this->getIO()->write("Please enter path for the output file");
         string outputPath = this->getIO()->read();
-        this->getIO()->write("Enter path for the output file");
-        
+        stringstream msg;
+        msg << "FILE ~";
+        for (int i = 0; i < this->getData()->getOutput().size(); i++) {
+            msg << (to_string(i + 1) + ".\t" + this->getData()->getOutput().at(i)) << "\n";
+        }
+        msg << "Done.~ PATH ~" << outputPath << "~";
+        this->getIO()->write(msg.str());
+        this->getIO()->read();
     }
 };

@@ -5,6 +5,10 @@
 #include <sys/stat.h>
 #include "Client.hpp"
 #include <thread>
+#include <regex>
+#include <fstream>
+
+using namespace std;
 
 void handleMessage(const string &msg, Client *client);
 
@@ -32,5 +36,14 @@ void handleMessage(const string &msg, Client *client) {
         client->close();
         exit(0);
     }
-    cout << msg << endl;
+    regex regex("FILE ~((.|\\n)+)~ PATH ~(.*)~");
+    smatch matcher;
+
+    if (regex_search(msg, matcher, regex))
+    {
+        ofstream outputFile(matcher[3].str());
+        outputFile << matcher[1].str();
+    } else {
+        cout << msg << endl;
+    }   
 }

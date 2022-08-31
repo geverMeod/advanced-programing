@@ -9,6 +9,7 @@
 #include "ClassifyDataCommand.hpp"
 #include "ConfusionMatrixCommand.hpp"
 #include "AlgorithemSettingsCommand.hpp"
+#include "DownloadResultsCommand.hpp"
 #include "Command.hpp"
 #include "../StandardIO.hpp"
 #include "../SocketIO.hpp"
@@ -39,7 +40,7 @@ void handleClient(int clientSock, Server *server) {
     commands.emplace_back(make_unique<AlgorithemSettingsCommand>(&sio, &data));
     commands.emplace_back(make_unique<ClassifyDataCommand>(&sio, &data));
     commands.emplace_back(make_unique<DisplayResultsCommand>(&sio, &data));
-    //downlode results
+    commands.emplace_back(make_unique<DownloadResultsCommand>(&sio, &data));
     commands.emplace_back(make_unique<ConfusionMatrixCommand>(&sio, &data));
 
     CLI cli((DefultIO *)&sio, move(commands));

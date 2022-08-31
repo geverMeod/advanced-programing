@@ -6,13 +6,37 @@
 
 #IncludeRegexTransform: 
 
-/home/omri/advanced-programing/advanced-programing/Client/Client.hpp
+/home/moshiko/advanced-programing/Client/Client.cpp
+iostream
+-
+sys/socket.h
+-
+stdio.h
+-
+arpa/inet.h
+-
+unistd.h
+-
+string.h
+-
+string
+-
+fstream
+-
+sstream
+-
+Client.hpp
+/home/moshiko/advanced-programing/Client/Client.hpp
+../utilityFunctions.hpp
+/home/moshiko/advanced-programing/utilityFunctions.hpp
+
+/home/moshiko/advanced-programing/Client/Client.hpp
 netinet/in.h
 -
 string
 -
 
-/home/omri/advanced-programing/advanced-programing/Client/main.cpp
+/home/moshiko/advanced-programing/Client/main.cpp
 iostream
 -
 sys/socket.h
@@ -24,7 +48,23 @@ arpa/inet.h
 sys/stat.h
 -
 Client.hpp
-/home/omri/advanced-programing/advanced-programing/Client/Client.hpp
+/home/moshiko/advanced-programing/Client/Client.hpp
 thread
+-
+regex
+-
+fstream
+-
+
+/home/moshiko/advanced-programing/utilityFunctions.cpp
+utilityFunctions.hpp
+/home/moshiko/advanced-programing/utilityFunctions.hpp
+netinet/in.h
+-
+cstring
+-
+
+/home/moshiko/advanced-programing/utilityFunctions.hpp
+string
 -
 

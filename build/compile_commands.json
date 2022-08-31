@@ -1,37 +1,37 @@
 [
 {
-  "directory": "/home/omri/advanced-programing/advanced-programing/build",
-  "command": "/usr/bin/g++    -g   -pthread -o CMakeFiles/Client.dir/Client/main.cpp.o -c /home/omri/advanced-programing/advanced-programing/Client/main.cpp",
-  "file": "/home/omri/advanced-programing/advanced-programing/Client/main.cpp"
+  "directory": "/home/moshiko/advanced-programing/build",
+  "command": "/usr/bin/g++    -g   -pthread -o CMakeFiles/Client.dir/Client/main.cpp.o -c /home/moshiko/advanced-programing/Client/main.cpp",
+  "file": "/home/moshiko/advanced-programing/Client/main.cpp"
 },
 {
-  "directory": "/home/omri/advanced-programing/advanced-programing/build",
-  "command": "/usr/bin/g++    -g   -pthread -o CMakeFiles/Client.dir/Client/Client.cpp.o -c /home/omri/advanced-programing/advanced-programing/Client/Client.cpp",
-  "file": "/home/omri/advanced-programing/advanced-programing/Client/Client.cpp"
+  "directory": "/home/moshiko/advanced-programing/build",
+  "command": "/usr/bin/g++    -g   -pthread -o CMakeFiles/Client.dir/Client/Client.cpp.o -c /home/moshiko/advanced-programing/Client/Client.cpp",
+  "file": "/home/moshiko/advanced-programing/Client/Client.cpp"
 },
 {
-  "directory": "/home/omri/advanced-programing/advanced-programing/build",
-  "command": "/usr/bin/g++    -g   -pthread -o CMakeFiles/Client.dir/utilityFunctions.cpp.o -c /home/omri/advanced-programing/advanced-programing/utilityFunctions.cpp",
-  "file": "/home/omri/advanced-programing/advanced-programing/utilityFunctions.cpp"
+  "directory": "/home/moshiko/advanced-programing/build",
+  "command": "/usr/bin/g++    -g   -pthread -o CMakeFiles/Client.dir/utilityFunctions.cpp.o -c /home/moshiko/advanced-programing/utilityFunctions.cpp",
+  "file": "/home/moshiko/advanced-programing/utilityFunctions.cpp"
 },
 {
-  "directory": "/home/omri/advanced-programing/advanced-programing/build",
-  "command": "/usr/bin/g++    -g   -pthread -o CMakeFiles/Server.dir/Server/main.cpp.o -c /home/omri/advanced-programing/advanced-programing/Server/main.cpp",
-  "file": "/home/omri/advanced-programing/advanced-programing/Server/main.cpp"
+  "directory": "/home/moshiko/advanced-programing/build",
+  "command": "/usr/bin/g++    -g   -pthread -o CMakeFiles/Server.dir/Server/main.cpp.o -c /home/moshiko/advanced-programing/Server/main.cpp",
+  "file": "/home/moshiko/advanced-programing/Server/main.cpp"
 },
 {
-  "directory": "/home/omri/advanced-programing/advanced-programing/build",
-  "command": "/usr/bin/g++    -g   -pthread -o CMakeFiles/Server.dir/Server/Iris.cpp.o -c /home/omri/advanced-programing/advanced-programing/Server/Iris.cpp",
-  "file": "/home/omri/advanced-programing/advanced-programing/Server/Iris.cpp"
+  "directory": "/home/moshiko/advanced-programing/build",
+  "command": "/usr/bin/g++    -g   -pthread -o CMakeFiles/Server.dir/Server/Iris.cpp.o -c /home/moshiko/advanced-programing/Server/Iris.cpp",
+  "file": "/home/moshiko/advanced-programing/Server/Iris.cpp"
 },
 {
-  "directory": "/home/omri/advanced-programing/advanced-programing/build",
-  "command": "/usr/bin/g++    -g   -pthread -o CMakeFiles/Server.dir/Server/Server.cpp.o -c /home/omri/advanced-programing/advanced-programing/Server/Server.cpp",
-  "file": "/home/omri/advanced-programing/advanced-programing/Server/Server.cpp"
+  "directory": "/home/moshiko/advanced-programing/build",
+  "command": "/usr/bin/g++    -g   -pthread -o CMakeFiles/Server.dir/Server/Server.cpp.o -c /home/moshiko/advanced-programing/Server/Server.cpp",
+  "file": "/home/moshiko/advanced-programing/Server/Server.cpp"
 },
 {
-  "directory": "/home/omri/advanced-programing/advanced-programing/build",
-  "command": "/usr/bin/g++    -g   -pthread -o CMakeFiles/Server.dir/utilityFunctions.cpp.o -c /home/omri/advanced-programing/advanced-programing/utilityFunctions.cpp",
-  "file": "/home/omri/advanced-programing/advanced-programing/utilityFunctions.cpp"
+  "directory": "/home/moshiko/advanced-programing/build",
+  "command": "/usr/bin/g++    -g   -pthread -o CMakeFiles/Server.dir/utilityFunctions.cpp.o -c /home/moshiko/advanced-programing/utilityFunctions.cpp",
+  "file": "/home/moshiko/advanced-programing/utilityFunctions.cpp"
 }
 ]
