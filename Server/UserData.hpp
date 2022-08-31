@@ -33,7 +33,7 @@ public:
             } else if (distanceFunction.compare("CHE"))
             {
                 output.at(i) = unclassified.at(i).classify(trainingData, k, &Iris::chebyshevDistance);
-            }
+            } 
         }
         irisTypes = Iris::getFlowerTypes(trainingData);
     }
@@ -66,13 +66,16 @@ public:
     }
     int setDistanceFunction(string s){
         if (!(s.compare("EUC")||s.compare("MAN")||s.compare("CHE"))){
-            return -1;
+            return 0;
         }
         this->distanceFunction = s;
-        return 0;
+        return 1;
     }
     int getK(){
         return this->k;
+    }
+    void setK(int newK){
+        this->k = newK;
     }
     string getSettingsString(){
         return "The current KNN paramethers are: k = " + to_string(this->getK()) +
