@@ -8,6 +8,7 @@ CMakeFiles/Server.dir/Server/Server.cpp.o: ../Server/Server.cpp
 CMakeFiles/Server.dir/Server/Server.cpp.o: ../Server/Server.hpp
 
 CMakeFiles/Server.dir/Server/main.cpp.o: ../DefaultIO.hpp
+CMakeFiles/Server.dir/Server/main.cpp.o: ../Server/AlgorithemSettingsCommand.hpp
 CMakeFiles/Server.dir/Server/main.cpp.o: ../Server/CLI.hpp
 CMakeFiles/Server.dir/Server/main.cpp.o: ../Server/ClassifyDataCommand.hpp
 CMakeFiles/Server.dir/Server/main.cpp.o: ../Server/Command.hpp

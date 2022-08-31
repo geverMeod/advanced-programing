@@ -23,17 +23,21 @@ public:
     void classify() {
         output.clear();
         output.resize(unclassified.size());
+        
+        typedef double (Iris::*distanceFunctionPtr)(Iris);
+        distanceFunctionPtr disFunc;
+        if (distanceFunction.compare("EUC"))
+        {
+            disFunc = &Iris::euclideanDistance;
+        } else if (distanceFunction.compare("MAN"))
+        {
+            disFunc = &Iris::manhattanDistance;
+        } else if (distanceFunction.compare("CHE"))
+        {
+            disFunc = &Iris::chebyshevDistance;
+        } 
         for (int i = 0; i < unclassified.size(); i++){
-            if (distanceFunction.compare("EUC"))
-            {
-                output.at(i) = unclassified.at(i).classify(trainingData, k, &Iris::euclideanDistance);
-            } else if (distanceFunction.compare("MAN"))
-            {
-                output.at(i) = unclassified.at(i).classify(trainingData, k, &Iris::manhattanDistance);
-            } else if (distanceFunction.compare("CHE"))
-            {
-                output.at(i) = unclassified.at(i).classify(trainingData, k, &Iris::chebyshevDistance);
-            } 
+            output.at(i) = unclassified.at(i).classify(trainingData, k, disFunc);
         }
         irisTypes = Iris::getFlowerTypes(trainingData);
     }
@@ -65,7 +69,7 @@ public:
         return this->distanceFunction;
     }
     int setDistanceFunction(string s){
-        if (!(s.compare("EUC")||s.compare("MAN")||s.compare("CHE"))){
+        if (!(!s.compare("EUC")||!s.compare("MAN")||!s.compare("CHE"))){
             return 0;
         }
         this->distanceFunction = s;

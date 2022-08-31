@@ -62,6 +62,6 @@ public:
             confusionMatrixStr.append("\n");
         }
         this->getIO()->write(confusionMatrixStr);
-        //this->getIO()->write(this->getData()->getClassifier()->toString());
+        this->getIO()->write(this->getData()->getSettingsString());
     }
 };

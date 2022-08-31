@@ -12,7 +12,7 @@ class AlgorithemSettingsCommand : public Command
 {
 
 public:
-    AlgorithemSettingsCommand(DefultIO *dio, UserData *data) : Command("Algorithe Settings", dio, data) {}
+    AlgorithemSettingsCommand(DefultIO *dio, UserData *data) : Command("Algorithem Settings", dio, data) {}
 
     void execute()
     {
@@ -25,29 +25,30 @@ public:
         }
         stringstream ss(msg);
         string part;
-
         int newK = 0;
-
         if (!getline(ss, part, ' '))
         {
-            perror("Invalid values");
+            this->getIO()->write("Invalid values");
             return;
         }
         try
         {
-            if (0 < stoi(part) && stoi(part) < 10)
+            newK = stoi(part);
+            if (!(0 < newK && ((newK <= 9 && part.size() == 1)||(newK == 10 && part.size() == 2))))
             {
-                newK = stoi(part);
+                this->getIO()->write("Invalid value for K, must be between 1 and 10");
+                return;
             }
         }
         catch (const exception &e)
         {
-            perror("Invalid value for K");
+            this->getIO()->write("Invalid value for K, input a number");
             return;
         }
-        if (!(this->getData()->setDistanceFunction(ss.str())))
+        getline(ss,part);
+        if (!(this->getData()->setDistanceFunction(part)))
         {
-            perror("Invalid value for the distance function");
+            this->getIO()->write("Invalid value for the distance function");
             return;
         }
         this->getData()->setK(newK);

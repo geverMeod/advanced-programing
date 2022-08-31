@@ -10,6 +10,22 @@
 string
 -
 
+/home/omri/advanced-programing/advanced-programing/Server/AlgorithemSettingsCommand.hpp
+Command.hpp
+/home/omri/advanced-programing/advanced-programing/Server/Command.hpp
+UserData.hpp
+/home/omri/advanced-programing/advanced-programing/Server/UserData.hpp
+algorithm
+-
+memory
+-
+../utilityFunctions.hpp
+/home/omri/advanced-programing/advanced-programing/utilityFunctions.hpp
+sstream
+-
+string
+-
+
 /home/omri/advanced-programing/advanced-programing/Server/CLI.hpp
 utility
 -
@@ -99,6 +115,8 @@ ClassifyDataCommand.hpp
 /home/omri/advanced-programing/advanced-programing/Server/ClassifyDataCommand.hpp
 ConfusionMatrixCommand.hpp
 /home/omri/advanced-programing/advanced-programing/Server/ConfusionMatrixCommand.hpp
+AlgorithemSettingsCommand.hpp
+/home/omri/advanced-programing/advanced-programing/Server/AlgorithemSettingsCommand.hpp
 Command.hpp
 /home/omri/advanced-programing/advanced-programing/Server/Command.hpp
 ../StandardIO.hpp

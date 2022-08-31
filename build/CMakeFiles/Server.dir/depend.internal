@@ -9,6 +9,7 @@ CMakeFiles/Server.dir/Server/Server.cpp.o
  /home/omri/advanced-programing/advanced-programing/Server/Server.hpp
 CMakeFiles/Server.dir/Server/main.cpp.o
  /home/omri/advanced-programing/advanced-programing/DefaultIO.hpp
+ /home/omri/advanced-programing/advanced-programing/Server/AlgorithemSettingsCommand.hpp
  /home/omri/advanced-programing/advanced-programing/Server/CLI.hpp
  /home/omri/advanced-programing/advanced-programing/Server/ClassifyDataCommand.hpp
  /home/omri/advanced-programing/advanced-programing/Server/Command.hpp

@@ -10,6 +10,7 @@ Server::Server(in_addr_t ip, in_port_t port){
     if (socketId < 0)
     {
         perror("error creating socket");
+        return;
     }
     struct sockaddr_in sin;
     memset(&sin, 0, sizeof(sin));
@@ -19,10 +20,12 @@ Server::Server(in_addr_t ip, in_port_t port){
 
     if (bind(socketId, (struct sockaddr *) &sin, sizeof(sin)) < 0) {
         perror("error binding socket");
+        return;
     }
 
     if (listen(socketId, this->maxQueueSize) < 0) {
         perror("error listening to a socket");
+        return;
     }
 
     memset(&timeVal, 0, sizeof(timeVal));
