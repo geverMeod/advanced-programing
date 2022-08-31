@@ -19,52 +19,49 @@ public:
             this->getIO()->write("Classify first");
             return;
         }
-        //Create a map containing all predictions and types
-        map<string, map<string, double>> typeMap;
+        //Create a map containing all types and their expectations,
+        //at this stage the double value is the count of the predictions
+        map<string, map<string, double>> typeCountMap;
         for (int i = 0; i < expectations.size(); i++) {
-            if (!typeMap[test[i].getType()].count(predictions[i])) {
-                typeMap[test[i].getType()][predictions[i]] = 0;
+            string type = expectations.at(i).getType();
+            if (!typeCountMap[type].count(predictions[i])) {
+                typeCountMap[type][predictions[i]] = 0.0;
             }
-            typeMap[test[i].getType()][predictions[i]]++;
+            typeCountMap[type][predictions[i]] += 1.0;
         }
-
-        vector<string> types;
-        for (const auto &pair: typeMap) {
-            //Save all test types
-            types.push_back(pair.first);
+        for (const pair<string, map<string, double>> &p: typeCountMap) {
             //sum all predictions
-            double sum = 0;
-            for (const auto &keys: pair.second) {
+            double sum = 0.0;
+            for (const pair<string, double> &keys: (p.second)) {
                 sum += keys.second;
             }
             //Convert the numbers to percentages
-            for (const auto &keys: pair.second) {
-                typeMap[pair.first][keys.first] = 100 * keys.second / sum;
+            for (const pair<string, double> &keys: p.second) {
+                typeCountMap[p.first][keys.first] = 100 * keys.second / sum;
             }
         }
         //Add missing types
-        for (const auto &pair: typeMap) {
-            for (const string &type: types) {
-                if (!typeMap[pair.first].count(type)) {
-                    typeMap[pair.first][type] = 0;
+        for (const pair<string, map<string, double>> &p: typeCountMap) {
+            for (const string &type: irisTypes) {
+                if (!p.second.count(type)) { //maybe a problam here
+                    typeCountMap[p.first][type] = 0;
                 }
             }
         }
-        //Convert the map to a matrix of strings
-        vector<vector<string>> matrix;
-        for (const auto &predictionPercentage: typeMap) {
-            vector<string> currPredictions;
-            for (const auto &prediction: predictionPercentage.second) {
-                currPredictions.push_back(to_string(prediction.second));
-            }
-            matrix.push_back(currPredictions);
+        
+        string confusionMatrixStr("\t\t");
+        for(string type: irisTypes){
+            confusionMatrixStr.append(type + "\t");
         }
-
-        ConfusionMatrix m(matrix, types);
-        this->getIO()->write(m.toString());
-        this->getIO()->write(this->getData()->getClassifier()->toString());
+        confusionMatrixStr.append("\n");
+        for(string expectationType: irisTypes){
+            confusionMatrixStr.append(expectationType + "\t");
+            for(string predictionType: irisTypes){
+                confusionMatrixStr.append(to_string(typeCountMap[expectationType][predictionType]) + "\t");
+            }
+            confusionMatrixStr.append("\n");
+        }
+        this->getIO()->write(confusionMatrixStr);
+        //this->getIO()->write(this->getData()->getClassifier()->toString());
     }
 };
-
-
-#endif //TESTING_CONFUSIONMATRIXCOMMAND_H

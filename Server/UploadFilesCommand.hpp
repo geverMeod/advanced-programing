@@ -32,7 +32,7 @@ public:
             return;
         }
         try {
-            this->getData()->setUnclassified(getIrisVecFromFile(input, false));
+            this->getData()->setUnclassified(getIrisVecFromFile(input, true));
         }
         catch (exception &e) {
             this->getIO()->write("Invalid file");

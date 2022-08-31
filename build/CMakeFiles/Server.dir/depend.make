@@ -11,6 +11,7 @@ CMakeFiles/Server.dir/Server/main.cpp.o: ../DefaultIO.hpp
 CMakeFiles/Server.dir/Server/main.cpp.o: ../Server/CLI.hpp
 CMakeFiles/Server.dir/Server/main.cpp.o: ../Server/ClassifyDataCommand.hpp
 CMakeFiles/Server.dir/Server/main.cpp.o: ../Server/Command.hpp
+CMakeFiles/Server.dir/Server/main.cpp.o: ../Server/ConfusionMatrixCommand.hpp
 CMakeFiles/Server.dir/Server/main.cpp.o: ../Server/DisplayResultsCommand.hpp
 CMakeFiles/Server.dir/Server/main.cpp.o: ../Server/Iris.hpp
 CMakeFiles/Server.dir/Server/main.cpp.o: ../Server/Server.hpp

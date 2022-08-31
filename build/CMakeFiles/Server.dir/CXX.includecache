@@ -34,6 +34,18 @@ string
 UserData.hpp
 /home/omri/advanced-programing/advanced-programing/Server/UserData.hpp
 
+/home/omri/advanced-programing/advanced-programing/Server/ConfusionMatrixCommand.hpp
+Command.hpp
+/home/omri/advanced-programing/advanced-programing/Server/Command.hpp
+vector
+-
+string
+-
+Iris.hpp
+/home/omri/advanced-programing/advanced-programing/Server/Iris.hpp
+map
+-
+
 /home/omri/advanced-programing/advanced-programing/Server/DisplayResultsCommand.hpp
 Command.hpp
 /home/omri/advanced-programing/advanced-programing/Server/Command.hpp
@@ -85,6 +97,8 @@ UploadFilesCommand.hpp
 /home/omri/advanced-programing/advanced-programing/Server/UploadFilesCommand.hpp
 ClassifyDataCommand.hpp
 /home/omri/advanced-programing/advanced-programing/Server/ClassifyDataCommand.hpp
+ConfusionMatrixCommand.hpp
+/home/omri/advanced-programing/advanced-programing/Server/ConfusionMatrixCommand.hpp
 Command.hpp
 /home/omri/advanced-programing/advanced-programing/Server/Command.hpp
 ../StandardIO.hpp

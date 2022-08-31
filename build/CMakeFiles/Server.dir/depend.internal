@@ -12,6 +12,7 @@ CMakeFiles/Server.dir/Server/main.cpp.o
  /home/omri/advanced-programing/advanced-programing/Server/CLI.hpp
  /home/omri/advanced-programing/advanced-programing/Server/ClassifyDataCommand.hpp
  /home/omri/advanced-programing/advanced-programing/Server/Command.hpp
+ /home/omri/advanced-programing/advanced-programing/Server/ConfusionMatrixCommand.hpp
  /home/omri/advanced-programing/advanced-programing/Server/DisplayResultsCommand.hpp
  /home/omri/advanced-programing/advanced-programing/Server/Iris.hpp
  /home/omri/advanced-programing/advanced-programing/Server/Server.hpp

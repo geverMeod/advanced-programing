@@ -7,6 +7,7 @@
 #include "DisplayResultsCommand.hpp"
 #include "UploadFilesCommand.hpp"
 #include "ClassifyDataCommand.hpp"
+#include "ConfusionMatrixCommand.hpp"
 #include "Command.hpp"
 #include "../StandardIO.hpp"
 #include "../SocketIO.hpp"
@@ -16,7 +17,7 @@ void handleClient(int clientSock, Server *server);
 void *foo(void* a);
 int main(int argc, char* argv[])
 {
-    Server server(INADDR_ANY, htons(55540));
+    Server server(INADDR_ANY, htons(55542));
     while (true) {
         int clientSock = server.acceptClient();
         if (clientSock == -1) {
@@ -36,7 +37,7 @@ void handleClient(int clientSock, Server *server) {
     commands.emplace_back(make_unique<UploadFilesCommand>(&sio, &data));
     commands.emplace_back(make_unique<ClassifyDataCommand>(&sio, &data));
     commands.emplace_back(make_unique<DisplayResultsCommand>(&sio, &data));
-
+    commands.emplace_back(make_unique<ConfusionMatrixCommand>(&sio, &data));
     CLI cli((DefultIO *)&sio, move(commands));
     cli.start();
     server->removeClient();
