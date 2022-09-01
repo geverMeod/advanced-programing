@@ -309,8 +309,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/omri/advanced-programing/advanced-programing/build",
-		"source" : "/home/omri/advanced-programing/advanced-programing"
+		"build" : "/home/moshiko/advanced-programing/build",
+		"source" : "/home/moshiko/advanced-programing"
 	},
 	"version" : 
 	{

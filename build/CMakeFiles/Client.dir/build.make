@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omri/advanced-programing/advanced-programing
+CMAKE_SOURCE_DIR = /home/moshiko/advanced-programing
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omri/advanced-programing/advanced-programing/build
+CMAKE_BINARY_DIR = /home/moshiko/advanced-programing/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Client.dir/depend.make
@@ -59,42 +59,42 @@ include CMakeFiles/Client.dir/flags.make
 
 CMakeFiles/Client.dir/Client/main.cpp.o: CMakeFiles/Client.dir/flags.make
 CMakeFiles/Client.dir/Client/main.cpp.o: ../Client/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omri/advanced-programing/advanced-programing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Client.dir/Client/main.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Client.dir/Client/main.cpp.o -c /home/omri/advanced-programing/advanced-programing/Client/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moshiko/advanced-programing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Client.dir/Client/main.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Client.dir/Client/main.cpp.o -c /home/moshiko/advanced-programing/Client/main.cpp
 
 CMakeFiles/Client.dir/Client/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/Client/main.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omri/advanced-programing/advanced-programing/Client/main.cpp > CMakeFiles/Client.dir/Client/main.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moshiko/advanced-programing/Client/main.cpp > CMakeFiles/Client.dir/Client/main.cpp.i
 
 CMakeFiles/Client.dir/Client/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/Client/main.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omri/advanced-programing/advanced-programing/Client/main.cpp -o CMakeFiles/Client.dir/Client/main.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moshiko/advanced-programing/Client/main.cpp -o CMakeFiles/Client.dir/Client/main.cpp.s
 
 CMakeFiles/Client.dir/Client/Client.cpp.o: CMakeFiles/Client.dir/flags.make
 CMakeFiles/Client.dir/Client/Client.cpp.o: ../Client/Client.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omri/advanced-programing/advanced-programing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Client.dir/Client/Client.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Client.dir/Client/Client.cpp.o -c /home/omri/advanced-programing/advanced-programing/Client/Client.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moshiko/advanced-programing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Client.dir/Client/Client.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Client.dir/Client/Client.cpp.o -c /home/moshiko/advanced-programing/Client/Client.cpp
 
 CMakeFiles/Client.dir/Client/Client.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/Client/Client.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omri/advanced-programing/advanced-programing/Client/Client.cpp > CMakeFiles/Client.dir/Client/Client.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moshiko/advanced-programing/Client/Client.cpp > CMakeFiles/Client.dir/Client/Client.cpp.i
 
 CMakeFiles/Client.dir/Client/Client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/Client/Client.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omri/advanced-programing/advanced-programing/Client/Client.cpp -o CMakeFiles/Client.dir/Client/Client.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moshiko/advanced-programing/Client/Client.cpp -o CMakeFiles/Client.dir/Client/Client.cpp.s
 
 CMakeFiles/Client.dir/utilityFunctions.cpp.o: CMakeFiles/Client.dir/flags.make
 CMakeFiles/Client.dir/utilityFunctions.cpp.o: ../utilityFunctions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omri/advanced-programing/advanced-programing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Client.dir/utilityFunctions.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Client.dir/utilityFunctions.cpp.o -c /home/omri/advanced-programing/advanced-programing/utilityFunctions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moshiko/advanced-programing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Client.dir/utilityFunctions.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Client.dir/utilityFunctions.cpp.o -c /home/moshiko/advanced-programing/utilityFunctions.cpp
 
 CMakeFiles/Client.dir/utilityFunctions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/utilityFunctions.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omri/advanced-programing/advanced-programing/utilityFunctions.cpp > CMakeFiles/Client.dir/utilityFunctions.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moshiko/advanced-programing/utilityFunctions.cpp > CMakeFiles/Client.dir/utilityFunctions.cpp.i
 
 CMakeFiles/Client.dir/utilityFunctions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/utilityFunctions.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omri/advanced-programing/advanced-programing/utilityFunctions.cpp -o CMakeFiles/Client.dir/utilityFunctions.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moshiko/advanced-programing/utilityFunctions.cpp -o CMakeFiles/Client.dir/utilityFunctions.cpp.s
 
 # Object files for target Client
 Client_OBJECTS = \
@@ -110,7 +110,7 @@ Client: CMakeFiles/Client.dir/Client/Client.cpp.o
 Client: CMakeFiles/Client.dir/utilityFunctions.cpp.o
 Client: CMakeFiles/Client.dir/build.make
 Client: CMakeFiles/Client.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omri/advanced-programing/advanced-programing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/moshiko/advanced-programing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Client"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Client.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -123,6 +123,6 @@ CMakeFiles/Client.dir/clean:
 .PHONY : CMakeFiles/Client.dir/clean
 
 CMakeFiles/Client.dir/depend:
-	cd /home/omri/advanced-programing/advanced-programing/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omri/advanced-programing/advanced-programing /home/omri/advanced-programing/advanced-programing /home/omri/advanced-programing/advanced-programing/build /home/omri/advanced-programing/advanced-programing/build /home/omri/advanced-programing/advanced-programing/build/CMakeFiles/Client.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/moshiko/advanced-programing/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moshiko/advanced-programing /home/moshiko/advanced-programing /home/moshiko/advanced-programing/build /home/moshiko/advanced-programing/build /home/moshiko/advanced-programing/build/CMakeFiles/Client.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Client.dir/depend
 

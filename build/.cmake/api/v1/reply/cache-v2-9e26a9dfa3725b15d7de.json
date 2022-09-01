@@ -11,7 +11,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/omri/advanced-programing/advanced-programing/build"
+			"value" : "/home/moshiko/advanced-programing/build"
 		},
 		{
 			"name" : "AP_SOURCE_DIR",
@@ -23,7 +23,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/omri/advanced-programing/advanced-programing"
+			"value" : "/home/moshiko/advanced-programing"
 		},
 		{
 			"name" : "BUILD_TESTING",
@@ -123,7 +123,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/omri/advanced-programing/advanced-programing/build"
+			"value" : "/home/moshiko/advanced-programing/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -691,7 +691,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/omri/advanced-programing/advanced-programing"
+			"value" : "/home/moshiko/advanced-programing"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1991,7 +1991,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "DESKTOP-7JMQJ7U"
+			"value" : "moshiko"
 		},
 		{
 			"name" : "SLURM_SBATCH_COMMAND",
