@@ -42,7 +42,7 @@ public:
         irisTypes = Iris::getFlowerTypes(trainingData);
     }
 
-    const vector<Iris> getTrainingData() const {
+    vector<Iris> getTrainingData() {
         return trainingData;
     }
 
@@ -50,7 +50,7 @@ public:
         trainingData = v;
     }
 
-    const vector<Iris> getUnclassified() const {
+    vector<Iris> getUnclassified() {
         return unclassified;
     }
 

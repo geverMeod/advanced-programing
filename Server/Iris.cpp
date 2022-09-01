@@ -40,7 +40,7 @@ string Iris::classify(vector<Iris> classifiedVec, int k, double (Iris::*distance
 	//this function checks the knn for an this flower and classifies it, we assume this flower is not classified.
 	//the function gets the distance function to use while calculating the knn.
 	for (int i = 0; i < classifiedVec.size(); i++) {
-		(classifiedVec[i].*distanceFunction)(*this);
+		(classifiedVec.at(i).*distanceFunction)(*this);
 	}//we calculate the distance of each flower from this flower.
 	vector<string> flowerTypes = getFlowerTypes(classifiedVec);
 	sort(classifiedVec.begin(), classifiedVec.end(), comparison);
@@ -57,13 +57,12 @@ string Iris::classify(vector<Iris> classifiedVec, int k, double (Iris::*distance
 	}
 	// now we know that the knn are the first k elements in the vector so we count
 	// how many instances there are of each type and classify this flower to be of the type with the most instances.
-	this->setType(flowerTypes[getMaxElementIndex(numOfFlowerType)]);
-	return this->getType();
+	return flowerTypes[getMaxElementIndex(numOfFlowerType)];
 }
 double Iris::euclideanDistance(Iris other) {
 	//the function calculates the euclidean distance between 2 flowers
 	double sqrDistance = 0;
-	for (int i = 0; i < 4; i++) {
+	for (int i = 0; i < attributes.size(); i++) {
 		sqrDistance += (this->attributes[i] - other.attributes[i]) * (this->attributes[i] - other.attributes[i]);
 	}
 	this->distance = sqrt(sqrDistance);
@@ -72,18 +71,17 @@ double Iris::euclideanDistance(Iris other) {
 double Iris::manhattanDistance(Iris other) {
 	//the function calculates the manhattan distance between 2 flowers.
 	this->distance = 0;
-	for (int i = 0; i < 4; i++) {
+	for (int i = 0; i < attributes.size(); i++) {
 		this->distance += abs(this->attributes[i] - other.attributes[i]);
 	}
 	return this->distance;
 }
 double Iris::chebyshevDistance(Iris other) {
 	//the function calculates the chebyshev distance between 2 flowers.
-	double maxDistance = 0;
-	for (int i = 0; i < 4; i++) {
-		maxDistance = max(abs(this->attributes[i] - other.attributes[i]), maxDistance);
+	this->distance = 0;
+	for (int i = 0; i < attributes.size(); i++) {
+		this->distance = max(abs(this->attributes[i] - other.attributes[i]), this->distance);
 	}
-	this->distance = maxDistance;
 	return this->distance;
 }
 //setters
@@ -91,7 +89,7 @@ void Iris::setType(string type) {
 	this->type = type;
 }
 void Iris::setAttribute(double value, int index) {
-	if (index >= sizeof(this->attributes) / sizeof(this->attributes[0])) {
+	if (index >= this->attributes.size()) {
 		return;
 	}
 	this->attributes[index] = value;

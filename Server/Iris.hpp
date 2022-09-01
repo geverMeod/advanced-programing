@@ -6,8 +6,11 @@ using namespace std;
 class Iris
 {
 private:
+	//the type of the iris
 	string type;
-	double attributes[4];
+	//a vector of the iris attributes
+	vector<double> attributes;
+	//saves the return value of the last time the distance function was invoked
 	double distance;
 
 	static bool comparison(Iris a, Iris b);
@@ -32,10 +35,12 @@ public:
 
 	void setType(string type);
 
-	double* getAttributes() {
+	vector<double> getAttributes() {
 		return this->attributes;
 	}
-
+	void pushAttribute(double att){
+		this->attributes.push_back(att);
+	}
 	void setAttribute(double value, int index);
 
 	double getDistance() {
