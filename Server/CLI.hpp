@@ -7,7 +7,7 @@ using namespace std;
 class CLI {
 private:
     DefultIO *dio;
-    vector<unique_ptr<Command>> commands; //maybe make pointer
+    vector<unique_ptr<Command>> commands;
 
     void printCommandMenu() {
         string msg = "Welcome to the KNN Classifier Server. Please choose an option:";
