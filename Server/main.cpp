@@ -24,6 +24,7 @@ int main(int argc, char* argv[])
         if (clientSock == -1) {
             break;
         }
+        //start a new thread for each client
         thread handlingClient(handleClient, clientSock, &server);
         handlingClient.detach();
     }
@@ -44,5 +45,6 @@ void handleClient(int clientSock, Server *server) {
 
     CLI cli((DefultIO *)&sio, move(commands));
     cli.start();
+    // start will return when the client exits, so it needs to be removed
     server->removeClient();
 }

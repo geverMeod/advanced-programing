@@ -3,6 +3,7 @@
 #include <cstring>
 #define END_MESSAGE "~end~"
 using namespace std;
+//recive message from socket
 string receive(int socket){
     string packet;
     string endMessage = END_MESSAGE;
@@ -19,6 +20,7 @@ string receive(int socket){
     string msg = packet.substr(0, packet.length() - 5);
     return msg;
 }
+//send message to socket
 void send(int socket, string msg){
     string packet = msg + END_MESSAGE;
     //Send the string through the socket

@@ -11,15 +11,16 @@ private:
     vector<string> output;
     //all of the iris types in the output, calculated in the classify method
     vector<string> irisTypes;
-
+    //a string representation of the distance function
     string distanceFunction;
-
+    //the k in knn
     int k;
 
 public:
     UserData() :
         trainingData(), unclassified(), output(), k(5), distanceFunction("EUC"){}
 
+    //fills the output vector with the classified irises
     void classify() {
         output.clear();
         output.resize(unclassified.size());
@@ -41,7 +42,7 @@ public:
         }
         irisTypes = Iris::getFlowerTypes(trainingData);
     }
-
+    //getters and setters
     vector<Iris> getTrainingData() {
         return trainingData;
     }
