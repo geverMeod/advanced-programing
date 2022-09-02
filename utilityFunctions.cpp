@@ -1,6 +1,7 @@
 #include "utilityFunctions.hpp"
 #include <netinet/in.h>
 #include <cstring>
+#include <stdexcept>
 #define END_MESSAGE "~end~"
 using namespace std;
 //recive message from socket
@@ -13,7 +14,7 @@ string receive(int socket){
         buffer[0] = 0;
         int read_bytes = ::recv(socket, buffer, 1, 0);
         if (read_bytes < 0) {
-            perror("error writing to sock");
+           throw runtime_error("error reciving from sock");
         }
         packet.append(buffer);
     }
@@ -26,6 +27,6 @@ void send(int socket, string msg){
     //Send the string through the socket
     size_t sent_bytes = ::send(socket, packet.c_str(), strlen(packet.c_str()), 0);
     if (sent_bytes < 0) {
-        perror("error sending message");
+        throw runtime_error("error writing to sock");
     }
 }

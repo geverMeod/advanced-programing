@@ -20,7 +20,13 @@ int main() {
     while (true) {
         string response;
         getline(cin, response);
-        client.send(response);
+        try {
+            client.send(response);
+        }
+        catch (const exception &e) {
+            perror("error writing to socket");
+            break;
+        }
     }
 }
 
