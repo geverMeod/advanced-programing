@@ -29,7 +29,7 @@ public:
             printCommandMenu();
             string optionStr = dio->read();
             int option;
-            //optionStr might not be a nubmber so stoi could throw an error that nedds to be catched.
+            //optionStr might not be a number so stoi could throw an error that nedds to be catched.
             try {
                 option = stoi(optionStr) - 1;
             }

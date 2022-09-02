@@ -25,7 +25,7 @@ public:
         for (int i = 0; i < this->getData()->getOutput().size(); i++) {
             msg << (to_string(i + 1) + ".\t" + this->getData()->getOutput().at(i)) << "\n";
         }
-        msg << "Done.~ PATH ~" << outputPath << "~";
+        msg << "~ PATH ~" << outputPath << "~";
         this->getIO()->write(msg.str());
         this->getIO()->read();
     }
