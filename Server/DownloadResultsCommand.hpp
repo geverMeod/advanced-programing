@@ -12,7 +12,7 @@ public:
     DownloadResultsCommand(DefultIO *dio, UserData *data) : Command("download data", dio, data) {}
 
     void execute() override{
-        //simmilar to DisplayResultsCommand, we write all the desired text into a message with unique text in it
+        //simmilar to DisplayResultsCommand, we write all the desired text into a massage with unique text in it
         //  and send it to the client for downloading.
          if (this->getData()->getOutput().empty()) {
             this->getIO()->write("Cant return results, data not classified");

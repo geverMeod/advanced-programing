@@ -4,7 +4,6 @@ using namespace std;
 class DisplayResultsCommand : public Command {
 public:
     void execute() override {
-        //if the output size is 0, it means the unclassified file hassant been classified.
         if (this->getData()->getOutput().size() == 0) {
             this->getIO()->write("Cant display results, data not classified");
             return;

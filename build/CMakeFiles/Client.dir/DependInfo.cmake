@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/moshiko/advanced-programing/Client/Client.cpp" "/home/moshiko/advanced-programing/build/CMakeFiles/Client.dir/Client/Client.cpp.o"
-  "/home/moshiko/advanced-programing/Client/main.cpp" "/home/moshiko/advanced-programing/build/CMakeFiles/Client.dir/Client/main.cpp.o"
-  "/home/moshiko/advanced-programing/utilityFunctions.cpp" "/home/moshiko/advanced-programing/build/CMakeFiles/Client.dir/utilityFunctions.cpp.o"
+  "/home/omri/advanced-programing/advanced-programing/Client/Client.cpp" "/home/omri/advanced-programing/advanced-programing/build/CMakeFiles/Client.dir/Client/Client.cpp.o"
+  "/home/omri/advanced-programing/advanced-programing/Client/main.cpp" "/home/omri/advanced-programing/advanced-programing/build/CMakeFiles/Client.dir/Client/main.cpp.o"
+  "/home/omri/advanced-programing/advanced-programing/utilityFunctions.cpp" "/home/omri/advanced-programing/advanced-programing/build/CMakeFiles/Client.dir/utilityFunctions.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

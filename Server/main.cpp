@@ -18,7 +18,7 @@
 void handleClient(int clientSock, Server *server);
 int main(int argc, char* argv[])
 {
-    Server server(INADDR_ANY, htons(55537));
+    Server server(INADDR_ANY, htons(55535));
     while (true) {
         int clientSock = server.acceptClient();
         if (clientSock == -1) {

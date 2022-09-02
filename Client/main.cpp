@@ -15,7 +15,11 @@ void handleMessage(const string &msg, Client *client);
 void receiving(Client *client);
 
 int main() {
+<<<<<<< HEAD
+    Client client(inet_addr("127.0.0.1"), htons(55535));//error writing to sock is displayed wrong
+=======
     Client client(inet_addr("127.0.0.1"), htons(55537));
+>>>>>>> 632a6e74b2db32e294f72989a6341389a13b8d4a
     thread thread(receiving, &client);
     while (true) {
         string response;

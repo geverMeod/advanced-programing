@@ -4,14 +4,14 @@
 
 
 # Configuration directories and files
-SourceDirectory: /home/moshiko/advanced-programing
-BuildDirectory: /home/moshiko/advanced-programing/build
+SourceDirectory: /home/omri/advanced-programing/advanced-programing
+BuildDirectory: /home/omri/advanced-programing/advanced-programing/build
 
 # Where to place the cost data store
 CostDataFile: 
 
 # Site is something like machine.domain, i.e. pragmatic.crd
-Site: moshiko
+Site: DESKTOP-7JMQJ7U
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
 BuildName: Linux-g++
@@ -26,7 +26,7 @@ SubmitURL: http://
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/bin/cmake" "/home/moshiko/advanced-programing"
+ConfigureCommand: "/usr/bin/cmake" "/home/omri/advanced-programing/advanced-programing"
 MakeCommand: /usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
 DefaultCTestConfigurationType: Release
 
