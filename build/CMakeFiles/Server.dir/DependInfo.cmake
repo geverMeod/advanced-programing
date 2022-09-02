@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/moshiko/advanced-programing/Server/Iris.cpp" "/home/moshiko/advanced-programing/build/CMakeFiles/Server.dir/Server/Iris.cpp.o"
-  "/home/moshiko/advanced-programing/Server/Server.cpp" "/home/moshiko/advanced-programing/build/CMakeFiles/Server.dir/Server/Server.cpp.o"
-  "/home/moshiko/advanced-programing/Server/main.cpp" "/home/moshiko/advanced-programing/build/CMakeFiles/Server.dir/Server/main.cpp.o"
-  "/home/moshiko/advanced-programing/utilityFunctions.cpp" "/home/moshiko/advanced-programing/build/CMakeFiles/Server.dir/utilityFunctions.cpp.o"
+  "/home/omri/advanced-programing/advanced-programing/Server/Iris.cpp" "/home/omri/advanced-programing/advanced-programing/build/CMakeFiles/Server.dir/Server/Iris.cpp.o"
+  "/home/omri/advanced-programing/advanced-programing/Server/Server.cpp" "/home/omri/advanced-programing/advanced-programing/build/CMakeFiles/Server.dir/Server/Server.cpp.o"
+  "/home/omri/advanced-programing/advanced-programing/Server/main.cpp" "/home/omri/advanced-programing/advanced-programing/build/CMakeFiles/Server.dir/Server/main.cpp.o"
+  "/home/omri/advanced-programing/advanced-programing/utilityFunctions.cpp" "/home/omri/advanced-programing/advanced-programing/build/CMakeFiles/Server.dir/utilityFunctions.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

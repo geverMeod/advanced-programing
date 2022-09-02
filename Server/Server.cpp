@@ -40,12 +40,15 @@ Server::Server(in_addr_t ip, in_port_t port){
 }
 
 int Server::acceptClient(){
+    cout << "accepting\n";
     if (select(socketId + 1, &readfds, nullptr, nullptr, &timeVal) < 0) {
         perror("selection error");
     }
+    cout << "accepting2\n";
     if (FD_ISSET(socketId, &readfds)) {
         unsigned int addrLen = sizeof(this->readAddr);
         int sock = accept(socketId, (struct sockaddr *) &readAddr, &addrLen);
+        cout << "accepting3\n";
         if (sock < 0) {
             perror("error accepting client");
         }

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moshiko/advanced-programing
+CMAKE_SOURCE_DIR = /home/omri/advanced-programing/advanced-programing
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moshiko/advanced-programing/build
+CMAKE_BINARY_DIR = /home/omri/advanced-programing/advanced-programing/build
 
 # Utility rule file for ContinuousCoverage.
 
@@ -71,6 +71,6 @@ CMakeFiles/ContinuousCoverage.dir/clean:
 .PHONY : CMakeFiles/ContinuousCoverage.dir/clean
 
 CMakeFiles/ContinuousCoverage.dir/depend:
-	cd /home/moshiko/advanced-programing/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moshiko/advanced-programing /home/moshiko/advanced-programing /home/moshiko/advanced-programing/build /home/moshiko/advanced-programing/build /home/moshiko/advanced-programing/build/CMakeFiles/ContinuousCoverage.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/omri/advanced-programing/advanced-programing/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omri/advanced-programing/advanced-programing /home/omri/advanced-programing/advanced-programing /home/omri/advanced-programing/advanced-programing/build /home/omri/advanced-programing/advanced-programing/build /home/omri/advanced-programing/advanced-programing/build/CMakeFiles/ContinuousCoverage.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ContinuousCoverage.dir/depend
 
