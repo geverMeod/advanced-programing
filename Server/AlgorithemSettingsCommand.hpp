@@ -18,6 +18,7 @@ public:
     {
         this->getIO()->write(this->getData()->getSettingsString());
         string msg;
+        //if the message is empty it means the client pressed enter
         msg = this->getIO()->read();
         if (msg.empty())
         {
@@ -34,6 +35,7 @@ public:
         try
         {
             newK = stoi(part);
+            //K has to be a number bitween 1 and 10. If K is bitween 1 and 9 the size of the K part of the message must be 1, likewise if K is 10 the the size must be 2.
             if (!(0 < newK && ((newK <= 9 && part.size() == 1)||(newK == 10 && part.size() == 2))))
             {
                 this->getIO()->write("Invalid value for K, must be between 1 and 10");
@@ -46,6 +48,7 @@ public:
             return;
         }
         getline(ss,part);
+        //setDistanceFunction returns 0 if part does not contain a dostance function like needed.
         if (!(this->getData()->setDistanceFunction(part)))
         {
             this->getIO()->write("Invalid value for the distance function");

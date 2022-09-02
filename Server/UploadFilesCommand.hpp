@@ -14,6 +14,7 @@ public:
     void execute() override {
         this->getIO()->write("Please upload your local train csv file");
         string input = this->getIO()->read();
+        //error if the input file is empty
         if (input.empty()) {
             this->getIO()->write("Invalid file");
             return;
@@ -21,6 +22,7 @@ public:
         try {
             this->getData()->setTrainingData(getIrisVecFromFile(input, true));
         }
+        //if the input given is not the correct file formart or not even a file, there is an exception needed to be catched.
         catch (invalid_argument &e) {
             this->getIO()->write("Invalid argumants in file: ");
             this->getIO()->write(e.what());
@@ -33,6 +35,7 @@ public:
         this->getIO()->write("Upload Complete.");
         this->getIO()->write("Please upload your local test csv file");
         input = this->getIO()->read();
+        //the same as before, throws an exception if needed.
         if (input.empty()) {
             this->getIO()->write("Invalid file");
             return;
@@ -49,6 +52,7 @@ public:
             this->getIO()->write("Invalid file");
             return;
         }
+        //the client can't send files with two different number of attributes
         if(this->getData()->getTrainingData().at(0).getAttributes().size() != this->getData()->getUnclassified().at(0).getAttributes().size()){
             this->getIO()->write("Training data and test attributes dont match");
             return;

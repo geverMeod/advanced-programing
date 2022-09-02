@@ -4,9 +4,7 @@
 
 #include "Server.hpp"
 using namespace std;
-Server::Server(in_addr_t ip, in_port_t port){
-    readAddr = sockaddr_in();
-    socketId = socket(AF_INET, SOCK_STREAM, 0);
+Server::Server(in_addr_t ip, in_port_t port) : socketId(socket(AF_INET, SOCK_STREAM, 0)), readAddr() {
     if (socketId < 0)
     {
         perror("error creating socket");
