@@ -4,7 +4,10 @@
 
 #include "Server.hpp"
 using namespace std;
-Server::Server(in_addr_t ip, in_port_t port) : socketId(socket(AF_INET, SOCK_STREAM, 0)), readAddr() {
+Server::Server(in_addr_t ip, in_port_t port) {
+    readAddr = sockaddr_in();
+    socketId = socket(AF_INET, SOCK_STREAM, 0);
+    //return if the socket creation failed
     if (socketId < 0)
     {
         perror("error creating socket");
@@ -15,12 +18,12 @@ Server::Server(in_addr_t ip, in_port_t port) : socketId(socket(AF_INET, SOCK_STR
     sin.sin_family = AF_INET;
     sin.sin_addr.s_addr = ip;
     sin.sin_port = port;
-
+    //return if the socket binding failed
     if (bind(socketId, (struct sockaddr *) &sin, sizeof(sin)) < 0) {
         perror("error binding socket");
         return;
     }
-
+    //return if there is an error while listning to sockets.
     if (listen(socketId, this->maxQueueSize) < 0) {
         perror("error listening to a socket");
         return;
@@ -38,15 +41,14 @@ Server::Server(in_addr_t ip, in_port_t port) : socketId(socket(AF_INET, SOCK_STR
 }
 
 int Server::acceptClient(){
-    cout << "accepting\n";
+    //select is used to get a time limit for the socket.
     if (select(socketId + 1, &readfds, nullptr, nullptr, &timeVal) < 0) {
         perror("selection error");
     }
-    cout << "accepting2\n";
     if (FD_ISSET(socketId, &readfds)) {
         unsigned int addrLen = sizeof(this->readAddr);
+        //accepting a new client
         int sock = accept(socketId, (struct sockaddr *) &readAddr, &addrLen);
-        cout << "accepting3\n";
         if (sock < 0) {
             perror("error accepting client");
         }
