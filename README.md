@@ -2,6 +2,8 @@
 by: Omri Nitzan and Moshe Kalamaro
 
 
+### We used unique_ptr, so please run the code in c++14.
+
 ## KNN
 The k-nearest neighbors (KNN) algorithm is a data classification method for estimating the likelihood that a data point will become a member of one group or another based on what group the data points nearest to it belong to.
 
